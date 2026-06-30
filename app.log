@@ -1358,3 +1358,97 @@ Allowed arguments: accessKey, aria-*, children, className, contentEditable, data
 2026-06-30 23:56:50,683 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:8050
 2026-06-30 23:56:50,683 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-01 00:04:31,866 [INFO] DB: DB connection opened for thread MainThread
+2026-07-01 00:04:31,866 [INFO] DB: Database initialised: data/analytics.db
+2026-07-01 00:04:31,966 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-01 00:04:31,967 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-01 00:04:31,986 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-01 00:04:31,986 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-01 00:04:55,362 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:04:55] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-01 00:05:01,615 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:01] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-01 00:05:05,353 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-17 to 2026-07-01
+2026-07-01 00:05:07,095 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-15 to 2026-07-01
+2026-07-01 00:05:07,712 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-07 to 2026-07-01
+2026-07-01 00:05:08,400 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-20 to 2026-07-01
+2026-07-01 00:05:08,769 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-17 to 2026-07-01
+2026-07-01 00:05:08,822 [INFO] YFINANCE: [YFINANCE] Fetched 70 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:08,965 [INFO] YFINANCE: [YFINANCE] Fetched 58 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:09,093 [INFO] YFINANCE: [YFINANCE] Fetched 103 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:09,173 [INFO] YFINANCE: [YFINANCE] Fetched 45 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:09,300 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:09,302 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:09,303 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:09,305 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:09,760 [INFO] YFINANCE: [YFINANCE] Fetched 58 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:09,788 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:09,937 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:09,957 [INFO] DB: DB connection opened for thread Thread-39 (process_request_thread)
+2026-07-01 00:05:09,958 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:10,944 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:10,971 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-01 to 2026-07-01
+2026-07-01 00:05:11,195 [INFO] YFINANCE: [YFINANCE] Fetched 134 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:11,213 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:13,345 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-01 to 2026-07-01
+2026-07-01 00:05:13,577 [INFO] YFINANCE: [YFINANCE] Fetched 134 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:13,588 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:15,672 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-07 to 2026-07-01
+2026-07-01 00:05:15,882 [INFO] YFINANCE: [YFINANCE] Fetched 103 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:15,907 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:17,144 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-12 to 2026-07-01
+2026-07-01 00:05:17,397 [INFO] YFINANCE: [YFINANCE] Fetched 78 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:17,417 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:19,896 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-17 to 2026-07-01
+2026-07-01 00:05:20,111 [INFO] YFINANCE: [YFINANCE] Fetched 58 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:20,122 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:29,689 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-20 to 2026-07-01
+2026-07-01 00:05:29,917 [INFO] YFINANCE: [YFINANCE] Fetched 45 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:29,944 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:05:45,761 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-01 to 2026-07-01
+2026-07-01 00:05:46,500 [INFO] YFINANCE: [YFINANCE] Fetched 134 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:05:46,532 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:05:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:02,716 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:02,730 [INFO] DB: DB connection opened for thread Thread-91 (process_request_thread)
+2026-07-01 00:06:02,733 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:02,745 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:07,033 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:07,457 [INFO] DB: DB connection opened for thread Thread-94 (process_request_thread)
+2026-07-01 00:06:07,458 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 2 (2026-04-29)
+2026-07-01 00:06:07,460 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:17,329 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:18,099 [INFO] DB: DB connection opened for thread Thread-96 (process_request_thread)
+2026-07-01 00:06:18,099 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 3 (2026-03-18)
+2026-07-01 00:06:18,101 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:18,530 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:19,010 [INFO] DB: DB connection opened for thread Thread-98 (process_request_thread)
+2026-07-01 00:06:19,011 [INFO] app.callbacks: [FOMC] Comparing statement 2 (2026-04-29) vs 3 (2026-03-18)
+2026-07-01 00:06:19,012 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:29,906 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:29,910 [INFO] DB: DB connection opened for thread Thread-100 (process_request_thread)
+2026-07-01 00:06:29,911 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:29,936 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-01 to 2026-07-01
+2026-07-01 00:06:30,190 [INFO] YFINANCE: [YFINANCE] Fetched 134 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:06:30,213 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:06:33,345 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-01 to 2026-07-01
+2026-07-01 00:06:33,551 [INFO] YFINANCE: [YFINANCE] Fetched 134 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:06:33,570 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:06:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:09:21,424 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-02 to 2026-07-01
+2026-07-01 00:09:21,646 [INFO] YFINANCE: [YFINANCE] Fetched 259 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:09:21,670 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:09:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:09:37,180 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-04-02 to 2026-07-01
+2026-07-01 00:09:37,445 [INFO] YFINANCE: [YFINANCE] Fetched 394 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:09:37,461 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:09:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:10:16,576 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-21 to 2026-07-01
+2026-07-01 00:10:16,798 [INFO] YFINANCE: [YFINANCE] Fetched 44 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:10:16,822 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:10:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:10:17,689 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-24 to 2026-07-01
+2026-07-01 00:10:17,916 [INFO] YFINANCE: [YFINANCE] Fetched 31 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:10:17,941 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:10:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:10:21,792 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-17 to 2026-07-01
+2026-07-01 00:10:22,027 [INFO] YFINANCE: [YFINANCE] Fetched 58 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-01 00:10:22,044 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:10:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:13:06,069 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:13:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:13:06,083 [INFO] DB: DB connection opened for thread Thread-151 (process_request_thread)
+2026-07-01 00:13:06,086 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:13:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-01 00:13:06,098 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:13:06] "POST /_dash-update-component HTTP/1.1" 200 -

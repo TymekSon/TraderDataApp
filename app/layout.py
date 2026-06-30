@@ -80,21 +80,27 @@ macro_tab = html.Div(
 markets_tab = html.Div(
     [
         html.H3("Market Price Comparison"),
-        html.Div(id="market-cards", style={"display": "flex", "flexWrap": "wrap", "gap": "10px", "marginBottom": 20}),
         dcc.Graph(id="market-chart"),
-        html.Label("Time range (days):"),
-        dcc.Slider(
-            id="market-range-slider",
-            min=7,
-            max=90,
-            step=1,
-            value=30,
-            marks={7: "7d", 14: "14d", 30: "30d", 60: "60d", 90: "90d"},
-        ),
-        dcc.Checklist(
-            id="market-normalise",
-            options=[{"label": "Normalise (start = 100%)", "value": "normalise"}],
-            value=[],
+        html.Div(
+            style={"display": "flex", "alignItems": "center", "gap": "20px", "marginTop": 10},
+            children=[
+                html.Div(style={"flex": 1}, children=[
+                    html.Label("Time range (days):"),
+                    dcc.Slider(
+                        id="market-range-slider",
+                        min=7,
+                        max=90,
+                        step=1,
+                        value=30,
+                        marks={7: "7d", 14: "14d", 30: "30d", 60: "60d", 90: "90d"},
+                    ),
+                ]),
+                dcc.Checklist(
+                    id="market-normalise",
+                    options=[{"label": "Normalise (start = 100%)", "value": "normalise"}],
+                    value=[],
+                ),
+            ],
         ),
     ]
 )

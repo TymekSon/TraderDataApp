@@ -392,7 +392,7 @@ Dokumentacja została przygotowana na podstawie analizy wymagań i najlepszych p
 
 ---
 
-## 12. Stan implementacji (2026-06-30)
+## 12. Stan implementacji (2026-07-01)
 
 ### Utworzona struktura katalogów i plików
 
@@ -401,25 +401,25 @@ Dokumentacja została przygotowana na podstawie analizy wymagań i najlepszych p
 │   ├── __init__.py
 │   ├── assets/
 │   │   └── style.css              # Podstawowe style CSS
-│   ├── dashboard.py               # Główny serwer Dash (create_app, run_server)
+│   ├── dashboard.py               # Główny serwer Dash (create_app, run)
 │   ├── callbacks.py               # Logika callbacków Dash
-│   └── layout.py                  # Komponenty UI (tabele, wykresy, dropdowny)
+│   └── layout.py                  # Komponenty UI (tabele, wykresy, checklisty)
 ├── data/
 │   ├── __init__.py
-│   ├── database.py                # Klasa Database (connect, execute, insert, upsert)
+│   ├── database.py                # Klasa Database (thread‑local SQLite)
 │   ├── models.py                  # Definicje tabel i indeksów SQLite
 │   └── db_init.py                 # Inicjalizacja bazy danych
 ├── scrapers/
 │   ├── __init__.py
-│   ├── base.py                    # Wspólne narzędzia (User-Agent, retry, fetch_page)
+│   ├── base.py                    # Wspólne narzędzia (User-Agent, retry)
 │   ├── forex_factory.py           # Klasa ForexFactoryScraper (szkielet)
-│   └── fomc.py                    # Klasa FOMCScraper (lista + treść statementów)
+│   └── fomc.py                    # Klasa FOMCScraper (pełna implementacja)
 ├── fetchers/
 │   ├── __init__.py
-│   └── yfinance_fetcher.py        # Klasa YFinanceFetcher (pobieranie OHLCV)
+│   └── yfinance_fetcher.py        # Klasa YFinanceFetcher (OHLCV + change_pct)
 ├── utils/
 │   ├── __init__.py
-│   ├── diff_utils.py              # Funkcja generate_diff_html (difflib)
+│   ├── diff_utils.py              # Word‑level diff (difflib + HTML)
 │   └── helpers.py                 # Parsowanie dat, safe_float itp.
 ├── config.yaml                    # Plik konfiguracyjny
 ├── requirements.txt               # Zależności Pythona
@@ -430,22 +430,152 @@ Dokumentacja została przygotowana na podstawie analizy wymagań i najlepszych p
 
 | Moduł | Klasa / funkcja | Opis |
 |-------|----------------|------|
-| `data/database.py` | `Database` | Zarządzanie połączeniem SQLite: `connect()`, `close()`, `execute()`, `fetch_all()`, `fetch_one()`, `insert()`, `upsert()` |
+| `data/database.py` | `Database` | Zarządzanie połączeniem SQLite z obsługą wielu wątków: `execute()`, `fetch_all()`, `fetch_one()`, `insert()`, `upsert()` |
 | `data/models.py` | (stałe) | Definicje tabel: `forex_calendar`, `fomc_statements`, `market_prices` wraz z indeksami |
 | `data/db_init.py` | `init_db()` | Tworzy wszystkie tabele i indeksy, zwraca instancję `Database` |
 | `scrapers/base.py` | `fetch_page()`, `retry()` | Pobieranie stron z User-Agent, dekorator z ponawianiem i backoffem |
 | `scrapers/forex_factory.py` | `ForexFactoryScraper` | Szkielet scrapowania kalendarza FF (`get_calendar()`, `_parse()`, `_filter_events()`) |
-| `scrapers/fomc.py` | `FOMCScraper` | Pobieranie listy statementów (`get_statements_list()`) i treści (`fetch_statement()`, `update_statements()`) |
+| `scrapers/fomc.py` | `FOMCScraper` | Pełny scraper FOMC: lista statementów (`get_statements_list()`), treść + data (`fetch_statement_with_date()`), auto‑aktualizacja (`update_statements()`) |
 | `fetchers/yfinance_fetcher.py` | `YFinanceFetcher` | Pobieranie dziennych OHLCV dla listy symboli (`fetch_prices()`), obliczanie `change_pct` |
-| `utils/diff_utils.py` | `generate_diff_html()` | Porównywanie tekstów, zwraca HTML z `<del>` (czerwony) i `<ins>` (zielony) |
+| `utils/diff_utils.py` | `generate_diff_html()` | Word‑level diff: porównuje tokeny (słowa), zwraca HTML z `<span>` – czerwony (strikethrough) dla usuniętych, zielony dla dodanych |
 | `utils/helpers.py` | `parse_date()`, `format_date()`, `safe_float()` itp. | Pomocnicze funkcje do dat i konwersji |
-| `app/dashboard.py` | `create_app()`, `run_server()` | Inicjalizacja Dash, wczytanie configu, rejestracja callbacków |
-| `app/layout.py` | `layout`, `TAB_LAYOUTS` | Layout z zakładkami: Kalendarz, Makro, Rynki, FOMC Diff |
-| `app/callbacks.py` | `register_callbacks()` | Callbacki do przełączania zakładek, odświeżania danych, rysowania wykresów i diffa FOMC |
-| `run.py` | `main()` | Punkt wejściowy z parsingiem argumentów CLI i konfiguracją logowania |
+| `app/dashboard.py` | `create_app()`, `run()` | Inicjalizacja Dash, wczytanie configu, rejestracja callbacków, uruchomienie serwera |
+| `app/layout.py` | `layout`, `TAB_LAYOUTS` | Layout z 4 zakładkami: Kalendarz, Makro, Rynki (wykres + slider), FOMC Diff (checklist + iframe) |
+| `app/callbacks.py` | `register_callbacks()` | Callbacki: przełączanie zakładek, scrapowanie FOMC z bazy, auto‑scrape przy pustej bazie, wykres rynków, word‑level diff |
+| `run.py` | `main()` | Punkt wejściowy z parsingiem argumentów CLI (`--config`, `--debug`, `--port`) i konfiguracją logowania |
 
 ### Uwagi
 
 - **ForexFactoryScraper._parse()** jest szkieletem – wymaga implementacji z Selenium/BeautifulSoup do prawdziwego scrapowania dynamicznej strony.
 - Przed uruchomieniem należy zainstalować zależności: `pip install -r requirements.txt`.
 - Aplikację uruchamia się komendą: `python run.py` (domyślnie na porcie 8050).
+
+---
+
+## 13. Szczegóły techniczne – decyzje projektowe
+
+Poniższy rozdział dokumentuje wszystkie kluczowe decyzje techniczne podjęte podczas implementacji. Stanowi bazę wiedzy dla przyszłych zmian i dla innych modeli AI pracujących nad tym projektem.
+
+### 13.1. Architektura bazy danych
+
+**Wybór:** SQLite z WAL (Write-Ahead Logging).
+
+**Uzasadnienie:** Lekka, zerowa konfiguracja, brak zewnętrznych zależności. WAL pozwala na równoczesne odczyty z wielu wątków.
+
+**Thread safety:** SQLite domyślnie blokuje połączenie do wątku, który je utworzył. Ponieważ Flask/Dash uruchamia callbacki w puli wątków (ThreadPool), użyto `threading.local()` – każdy wątek ma własne połączenie. Dodatkowo `busy_timeout=5000` zapobiega blokadom przy równoczesnym zapisie.
+
+**Model:** Każde wywołanie `execute()` / `fetch_all()` automatycznie tworzy połączenie dla bieżącego wątku (jeśli go brak) poprzez `_get_conn()`.
+
+### 13.2. Scrapowanie FOMC
+
+**Wybór:** `requests` + `BeautifulSoup4` (bez Selenium).
+
+**Uzasadnienie:** Strona Fed jest statyczna – nie wymaga JavaScriptu. Selenium byłoby nadmiarowe i wolne.
+
+**Linki:** Scraper szuka wzorca `/newsevents/pressreleases/monetaryYYYYMMDD[a-z]?\.htm` na stronie kalendarza FOMC. To odróżnia **statementy** (komunikaty po posiedzeniach) od minutek (`fomcminutes`) i innych dokumentów.
+
+**Ekstrakcja treści:** 
+- Pomija div z klasą `.heading`, wybiera `div.col-xs-12.col-sm-8.col-md-8:not(.heading)`
+- Jeśli brak – iteruje po wszystkich pasujących divach i wybiera najdłuższy blok tekstu (>100 znaków)
+- Fallback: `div#article`, `div.statement`, `article`, `div#content`
+
+**Ekstrakcja daty:** Najpierw próbuje `p.article__time` (np. "June 17, 2026"), fallback do daty z URL.
+
+**Kodowanie znaków:** Strona Fed używa czasem Windows-1252. Wymuszone `resp.apparent_encoding` przed przekazaniem do BeautifulSoup.
+
+**Ponawianie:** Użyty dekorator `@retry` z wykładniczym backoffem (3 próby, start 1s, mnożnik 2x).
+
+### 13.3. Porównywanie statementów (FOMC Diff)
+
+**UI:** 
+- Lewa kolumna (350px): lista statementów jako `dcc.Checklist`
+- Prawa kolumna: `html.Iframe` z `srcDoc` wyświetlającym wynik diffa
+- Wybór 2 checkboxów → automatyczne porównanie (bez przycisku)
+- Przy < 2 zaznaczonych: komunikat
+- Przy > 2 zaznaczonych: komunikat
+
+**Algorytm diff (`utils/diff_utils.py`):**
+- **Word‑level:** Tekst dzielony na tokeny regexem `(\S+\s*)` – każde słowo to osobny token. Dzięki temu żadne słowo nie jest przecięte na pół.
+- `SequenceMatcher(autojunk=False)` – wyłączona heurystyka, która powodowała łączenie niepasujących fragmentów.
+- Wynik: znaczniki `<span>` z inline CSS (nie `<del>`/`<ins>`, bo Dash 4.x nie wspiera `dangerously_set_inner_HTML`).
+- Usunięte słowa: czerwone tło + przekreślenie (`#fdd` + `line-through`).
+- Dodane słowa: zielone tło (`#dfd`).
+
+**Renderowanie w Dash 4.x:**
+- `dcc.Markdown` z `dangerously_allow_html=True` – nie działa, bo konwertuje `<del>` na składnię `~~`.
+- `html.Iframe` z `srcDoc` – jedyna niezawodna metoda na wyświetlenie surowego HTML w Dash 4.x.
+
+### 13.4. Pobieranie danych rynkowych (YFinance)
+
+**Wybór:** `yfinance` – darmowe API, obsługuje wszystkie potrzebne symbole.
+
+**Normalizacja wykresów:** 
+- Opcjonalna (checkbox) – start = 100% dla łatwego porównania względnych zmian.
+- Wyrównanie zakresów dat: przed rysowaniem znajdowana jest wspólna część wspólna (latest common start, earliest common end) dla wszystkich serii. Eliminuje to problem "Bitcoin zaczyna się wcześniej".
+
+**Opisowe nazwy:** Symbolom nadawane są przyjazne nazwy:
+- `^TNX` → "US 10Y Yield", `DX-Y.NYB` → "US Dollar Index", `BTC-USD` → "Bitcoin", itd.
+
+### 13.5. Logowanie
+
+**Format:** Każdy moduł używa dedykowanego nazwanego loggera zamiast `__name__`:
+- `[FOMC]` – scraper FOMC
+- `[FOREX]` – scraper Forex Factory
+- `[SCRAPER]` – narzędzia bazowe scrapowania
+- `[YFINANCE]` – fetcher yfinance
+- `[DB]` – operacje bazodanowe
+- `[DASHBOARD]` – aplikacja Dash
+
+**Poziomy:** INFO dla normalnego działania, WARNING dla problemów niekrytycznych, ERROR dla błędów.
+
+### 13.6. Konfiguracja (config.yaml)
+
+**Format:** YAML – czytelny, łatwy do edycji.
+
+**Sekcje:**
+- `database.path` – ścieżka do pliku SQLite
+- `forexfactory.url` + `events` – URL kalendarza i lista filtrów
+- `fomc.url` + `statement_selector` – URL kalendarza FOMC i selektor CSS treści
+- `markets.symbols` + `range_days` – lista symboli i domyślny zakres dni
+- `logging.level` + `file` – konfiguracja logowania
+
+### 13.7. Uruchamianie
+
+**Punkt wejściowy:** `run.py` z `argparse`:
+- `--config` – ścieżka do config.yaml (domyślnie `config.yaml`)
+- `--debug` – tryb deweloperski Dash
+- `--port` – port serwera (domyślnie 8050)
+
+**Kolejność inicjalizacji:**
+1. Parsowanie argumentów CLI
+2. Konfiguracja logowania (z config.yaml lub fallback)
+3. Inicjalizacja Dash (`create_app()`):
+   a. Wczytanie config.yaml
+   b. Inicjalizacja bazy SQLite (tabele + indeksy)
+   c. Załadowanie layoutu
+   d. Rejestracja callbacków
+4. Uruchomienie serwera (`app.run()`)
+
+### 13.8. Zależności (requirements.txt)
+
+| Pakiet | Wersja (min) | Uzasadnienie |
+|--------|-------------|-------------|
+| dash | 2.14.0 | Framework dashboardu |
+| plotly | 5.15.0 | Wykresy interaktywne |
+| pandas | 2.0.0 | Manipulacja danymi |
+| yfinance | 0.2.28 | Dane rynkowe |
+| requests | 2.31.0 | Zapytania HTTP |
+| beautifulsoup4 | 4.12.0 | Parsowanie HTML |
+| selenium | 4.15.0 | (opcjonalnie) Scrapowanie FF |
+| webdriver-manager | 4.0.0 | (opcjonalnie) Driver Selenium |
+| PyYAML | 6.0 | Parsowanie YAML |
+| lxml | 4.9.0 | (opcjonalnie) Szybszy parser BS4 |
+
+### 13.9. Znane ograniczenia i przyszłe usprawnienia
+
+1. **ForexFactoryScraper** – wymaga implementacji z Selenium (strona dynamiczna, JS).
+2. **Testy** – brak testów jednostkowych i integracyjnych.
+3. **Scrapowanie w tle** – obecnie scrapowanie FOMC blokuje callback Dash. Docelowo powinno być asynchroniczne (threading / dash-extensions).
+4. **Brak API key** – na razie brak integracji z FRED lub innymi API wymagającymi kluczy.
+5. **Export danych** – brak możliwości eksportu do CSV/Excel.
+6. **Responsywność** – layout nie jest w pełni responsywny dla małych ekranów.

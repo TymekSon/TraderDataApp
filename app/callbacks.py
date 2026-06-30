@@ -97,46 +97,70 @@ def register_callbacks(dash_app, db: Database, config: dict):
         return rows
 
     # ------------------------------------------------------------------
-    # Markets tab – chart + cards
+    # Markets tab – chart
     # ------------------------------------------------------------------
     @dash_app.callback(
         Output("market-chart", "figure"),
-        Output("market-cards", "children"),
         Input("market-range-slider", "value"),
         Input("market-normalise", "value"),
     )
     def update_market_chart(range_days, normalise):
         symbols = config.get("markets", {}).get("symbols", [])
+
+        # Descriptive names for the UI
+        SYMBOL_NAMES = {
+            "^TNX": "US 10Y Yield",
+            "DX-Y.NYB": "US Dollar Index",
+            "BTC-USD": "Bitcoin",
+            "GC=F": "Gold",
+            "CL=F": "Crude Oil",
+            "ES=F": "S&P 500 E-mini",
+        }
+
         end = date.today()
         start = end - timedelta(days=range_days)
 
         fetcher = YFinanceFetcher()
         df = fetcher.fetch_prices(symbols, start=start, end=end)
         if df.empty:
-            return {}, html.Div("No data available.")
+            return {}
 
         normalise_flag = "normalise" in (normalise or [])
+
+        # ── Align all series to a common date range ────────────────
+        date_ranges = {}
+        for symbol in symbols:
+            sym_df = df[df["symbol"] == symbol].dropna(subset=["close"])
+            if not sym_df.empty:
+                date_ranges[symbol] = (
+                    sym_df["date"].min(), sym_df["date"].max()
+                )
+
+        if date_ranges:
+            common_start = max(d[0] for d in date_ranges.values())
+            common_end = min(d[1] for d in date_ranges.values())
+            df = df[(df["date"] >= common_start) & (df["date"] <= common_end)]
 
         import plotly.graph_objects as go
 
         fig = go.Figure()
-        cards = []
 
         for symbol in symbols:
             sym_df = df[df["symbol"] == symbol].sort_values("date")
             if sym_df.empty:
                 continue
 
+            display_name = SYMBOL_NAMES.get(symbol, symbol)
             dates = sym_df["date"].tolist()
             closes = sym_df["close"].tolist()
 
             if normalise_flag and closes and closes[0] != 0:
                 base = closes[0]
                 values = [(c / base) * 100 for c in closes]
-                name_label = f"{symbol} (norm)"
+                name_label = display_name
             else:
                 values = closes
-                name_label = symbol
+                name_label = display_name
 
             fig.add_trace(
                 go.Scatter(
@@ -147,37 +171,13 @@ def register_callbacks(dash_app, db: Database, config: dict):
                 )
             )
 
-            # Card with latest change %
-            last_row = sym_df.iloc[-1]
-            change = last_row.get("change_pct")
-            if change is not None:
-                color = "green" if change >= 0 else "red"
-                cards.append(
-                    html.Div(
-                        [
-                            html.H5(symbol),
-                            html.Span(
-                                f"{change:+.2f}%",
-                                style={"color": color, "fontWeight": "bold"},
-                            ),
-                        ],
-                        style={
-                            "border": "1px solid #ddd",
-                            "borderRadius": 8,
-                            "padding": "10px 15px",
-                            "minWidth": 120,
-                            "textAlign": "center",
-                        },
-                    )
-                )
-
         fig.update_layout(
             title="Market Prices",
             xaxis_title="Date",
             yaxis_title="Normalised Price" if normalise_flag else "Price (USD)",
             hovermode="x unified",
         )
-        return fig, cards
+        return fig
 
     # ------------------------------------------------------------------
     # FOMC diff tab
