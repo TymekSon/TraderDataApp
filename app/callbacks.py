@@ -105,6 +105,8 @@ def register_callbacks(dash_app, db: Database, config: dict):
         Input("market-normalise", "value"),
     )
     def update_market_chart(range_days, normalise):
+        import plotly.graph_objects as go
+
         symbols = config.get("markets", {}).get("symbols", [])
 
         # Descriptive names for the UI
@@ -123,9 +125,14 @@ def register_callbacks(dash_app, db: Database, config: dict):
         fetcher = YFinanceFetcher()
         df = fetcher.fetch_prices(symbols, start=start, end=end)
         if df.empty:
-            return {}
+            logger.info("[MARKETS] No data returned from yfinance")
+            fig = go.Figure()
+            fig.update_layout(title="Market Prices — no data available")
+            return fig
 
         normalise_flag = "normalise" in (normalise or [])
+
+        logger.info("[MARKETS] Raw data: %d rows, %d symbols", len(df), df["symbol"].nunique())
 
         # ── Align all series to a common date range ────────────────
         date_ranges = {}
@@ -136,18 +143,21 @@ def register_callbacks(dash_app, db: Database, config: dict):
                     sym_df["date"].min(), sym_df["date"].max()
                 )
 
-        if date_ranges:
+        if len(date_ranges) > 1:
             common_start = max(d[0] for d in date_ranges.values())
             common_end = min(d[1] for d in date_ranges.values())
-            df = df[(df["date"] >= common_start) & (df["date"] <= common_end)]
-
-        import plotly.graph_objects as go
+            logger.info("[MARKETS] Common range: %s to %s", common_start, common_end)
+            if common_start <= common_end:
+                before = len(df)
+                df = df[(df["date"] >= common_start) & (df["date"] <= common_end)]
+                logger.info("[MARKETS] After alignment: %d rows (was %d)", len(df), before)
 
         fig = go.Figure()
 
         for symbol in symbols:
             sym_df = df[df["symbol"] == symbol].sort_values("date")
             if sym_df.empty:
+                logger.info("[MARKETS] No data for %s after alignment", symbol)
                 continue
 
             display_name = SYMBOL_NAMES.get(symbol, symbol)
@@ -157,19 +167,19 @@ def register_callbacks(dash_app, db: Database, config: dict):
             if normalise_flag and closes and closes[0] != 0:
                 base = closes[0]
                 values = [(c / base) * 100 for c in closes]
-                name_label = display_name
             else:
                 values = closes
-                name_label = display_name
 
             fig.add_trace(
                 go.Scatter(
                     x=dates,
                     y=values,
                     mode="lines",
-                    name=name_label,
+                    name=display_name,
                 )
             )
+
+        logger.info("[MARKETS] Figure has %d traces", len(fig.data))
 
         fig.update_layout(
             title="Market Prices",
