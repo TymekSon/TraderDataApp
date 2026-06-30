@@ -1,0 +1,679 @@
+2026-06-30 22:58:45,188 [INFO] data.database: Connected to database: data/analytics.db
+2026-06-30 22:58:45,222 [INFO] data.db_init: Database initialised: data/analytics.db
+2026-06-30 23:01:17,629 [INFO] data.database: Connected to database: data/analytics.db
+2026-06-30 23:01:17,630 [INFO] data.db_init: Database initialised: data/analytics.db
+2026-06-30 23:01:17,732 [INFO] app.dashboard: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:03:42,151 [INFO] data.database: Connected to database: data/analytics.db
+2026-06-30 23:03:42,151 [INFO] data.db_init: Database initialised: data/analytics.db
+2026-06-30 23:03:42,242 [INFO] app.dashboard: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:03:42,242 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:03:42,261 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:03:42,261 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-30 23:04:02,190 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET / HTTP/1.1" 200 -
+2026-06-30 23:04:02,216 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /assets/style.css?m=1782852704.0053992 HTTP/1.1" 200 -
+2026-06-30 23:04:02,261 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /_dash-component-suites/dash/deps/react@18.v4_3_0m1782553306.3.1.min.js HTTP/1.1" 200 -
+2026-06-30 23:04:02,261 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-06-30 23:04:02,266 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /_dash-component-suites/dash/deps/prop-types@15.v4_3_0m1782553306.8.1.min.js HTTP/1.1" 200 -
+2026-06-30 23:04:02,337 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /_dash-component-suites/dash/deps/react-dom@18.v4_3_0m1782553306.3.1.min.js HTTP/1.1" 200 -
+2026-06-30 23:04:02,344 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-06-30 23:04:02,888 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /_dash-component-suites/dash/dash-renderer/build/dash_renderer.v4_3_0m1782553306.min.js HTTP/1.1" 200 -
+2026-06-30 23:04:02,958 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /_dash-layout HTTP/1.1" 200 -
+2026-06-30 23:04:02,959 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:02] "GET /_dash-dependencies HTTP/1.1" 200 -
+2026-06-30 23:04:03,479 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:04:03,567 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:03] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-06-30 23:04:03,568 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:03] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-06-30 23:04:03,570 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:03] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-06-30 23:04:03,574 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:04,027 [WARNING] scrapers.base: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:05,028 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:05,433 [WARNING] scrapers.base: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:07,093 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:07] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2026-06-30 23:04:07,434 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:07,839 [WARNING] scrapers.base: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:07,839 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 44, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:07,863 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:07] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:04:09,155 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:09,536 [WARNING] scrapers.base: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:10,537 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:10,889 [WARNING] scrapers.base: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:12,890 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:13,264 [WARNING] scrapers.base: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:13,265 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 44, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:13,266 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:13] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:04:14,906 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:15,245 [WARNING] scrapers.base: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:16,245 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:16,628 [WARNING] scrapers.base: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:18,628 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:18,869 [WARNING] scrapers.base: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:18,869 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 44, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:04:18,871 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:04:30,355 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:04:30,377 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 55, in refresh_macro
+    rows = db.fetch_all(
+        """
+    ...<10 lines>...
+        """
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23044 and this is thread id 24664.
+2026-06-30 23:04:30,382 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:30] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:04:31,465 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 55, in refresh_macro
+    rows = db.fetch_all(
+        """
+    ...<10 lines>...
+        """
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23044 and this is thread id 15220.
+2026-06-30 23:04:31,467 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:31] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:04:38,651 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:04:38,667 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:38] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-06-30 23:04:38,673 [INFO] fetchers.yfinance_fetcher: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:04:38,681 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:38] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2026-06-30 23:04:38,807 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:38] "GET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1" 200 -
+2026-06-30 23:04:39,291 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:04:50,643 [INFO] fetchers.yfinance_fetcher: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-01 to 2026-06-30
+2026-06-30 23:04:50,884 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:04:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:12,485 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:12,502 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 163, in populate_fomc_dropdowns
+    rows = db.fetch_all(
+        "SELECT id, date, title FROM fomc_statements ORDER BY date DESC"
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23044 and this is thread id 18704.
+2026-06-30 23:05:12,504 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:12,507 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:12] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:05:14,428 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:14,429 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 163, in populate_fomc_dropdowns
+    rows = db.fetch_all(
+        "SELECT id, date, title FROM fomc_statements ORDER BY date DESC"
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23044 and this is thread id 25308.
+2026-06-30 23:05:14,432 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:14] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:05:14,455 [INFO] fetchers.yfinance_fetcher: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:05:14,698 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:21,900 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:21,913 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 163, in populate_fomc_dropdowns
+    rows = db.fetch_all(
+        "SELECT id, date, title FROM fomc_statements ORDER BY date DESC"
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23044 and this is thread id 29812.
+2026-06-30 23:05:21,917 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:21,918 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:05:25,409 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:37,267 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:37,269 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 163, in populate_fomc_dropdowns
+    rows = db.fetch_all(
+        "SELECT id, date, title FROM fomc_statements ORDER BY date DESC"
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23044 and this is thread id 12996.
+2026-06-30 23:05:37,273 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:37] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:05:37,288 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 55, in refresh_macro
+    rows = db.fetch_all(
+        """
+    ...<10 lines>...
+        """
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23044 and this is thread id 27576.
+2026-06-30 23:05:37,294 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:37] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:05:39,707 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:05:39,724 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:05:40,075 [WARNING] scrapers.base: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:05:41,076 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:05:41,489 [WARNING] scrapers.base: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:05:43,490 [INFO] scrapers.forex_factory: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:05:43,870 [WARNING] scrapers.base: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:05:43,871 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 44, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:05:43,874 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:05:43] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:06:27,011 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:06:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:06:27,034 [INFO] fetchers.yfinance_fetcher: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:06:27,268 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:06:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:06:28,101 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:06:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:06:28,113 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 163, in populate_fomc_dropdowns
+    rows = db.fetch_all(
+        "SELECT id, date, title FROM fomc_statements ORDER BY date DESC"
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23044 and this is thread id 25824.
+2026-06-30 23:06:28,116 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:06:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:06:28,117 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:06:28] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:12:38,053 [INFO] data.database: Connected to database: data/analytics.db
+2026-06-30 23:12:38,054 [INFO] data.db_init: Database initialised: data/analytics.db
+2026-06-30 23:12:38,148 [INFO] app.dashboard: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:12:38,149 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:12:38,165 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:12:38,165 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-30 23:12:41,490 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:12:41] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-06-30 23:12:45,517 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: '..fomc-dropdown-old.options...fomc-dropdown-new.options..'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output '..fomc-dropdown-old.options...fomc-dropdown-new.options..'."
+2026-06-30 23:12:45,523 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:12:45] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:12:45,527 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:12:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:12:45,555 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:12:46,157 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:12:46,214 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:12:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:12:48,334 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:12:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:12:59,307 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:12:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:12:59,339 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:12:59,646 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:12:59,658 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:12:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:00,571 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:00,586 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 55, in refresh_macro
+    rows = db.fetch_all(
+        """
+    ...<10 lines>...
+        """
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 29676 and this is thread id 15212.
+2026-06-30 23:13:00,592 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:00] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:13:03,154 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 55, in refresh_macro
+    rows = db.fetch_all(
+        """
+    ...<10 lines>...
+        """
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 29676 and this is thread id 28900.
+2026-06-30 23:13:03,156 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:03] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:13:03,537 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:03,552 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:03,982 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:04,392 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:04,692 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:04,983 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:05,105 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:05,389 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:05,693 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:06,090 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:06,347 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:06,369 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:13:06,606 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:13:06,619 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:07,390 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:07,777 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:07,777 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 44, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:07,782 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:07] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:13:08,091 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:08,449 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:08,449 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 44, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:13:08,452 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:08] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:13:11,810 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:13:12,010 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:13:12,026 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:22,258 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-01 to 2026-06-30
+2026-06-30 23:13:22,516 [INFO] YFINANCE: [YFINANCE] Fetched 265 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:13:22,530 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:30,922 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-16 to 2026-06-30
+2026-06-30 23:13:31,130 [INFO] YFINANCE: [YFINANCE] Fetched 64 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:13:31,138 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:13:43,002 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-23 to 2026-06-30
+2026-06-30 23:13:43,219 [INFO] YFINANCE: [YFINANCE] Fetched 37 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:13:43,239 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:13:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:14:30,586 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:14:30,855 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:14:30,876 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:14:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:14:48,914 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-16 to 2026-06-30
+2026-06-30 23:14:49,199 [INFO] YFINANCE: [YFINANCE] Fetched 64 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:14:49,210 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:14:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:15:05,970 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:15:05] "POST /_dash-update-component HTTP/1.1" 200 -

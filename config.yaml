@@ -1,0 +1,35 @@
+database:
+  path: "data/analytics.db"
+
+forexfactory:
+  url: "https://www.forexfactory.com/calendar"
+  events:
+    - "CPI"
+    - "CPI m/m"
+    - "PPI m/m"
+    - "Non-Farm Employment Change"
+    - "Unemployment Rate"
+    - "GDP"
+    - "Core Retail Sales"
+    - "Core PCE Price Index m/m"
+    - "ISM Manufacturing PMI"
+    - "ISM Services PMI"
+
+fomc:
+  url: "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  statement_selector: "div.col-xs-12 col-sm-8 col-md-8" 
+  xPath: /html/body/div[7]/div[2]/div/div[3]
+
+markets:
+  symbols:
+    - "^TNX"
+    - "DX-Y.NYB"
+    - "BTC-USD"
+    - "GC=F"
+    - "CL=F"
+    - "ES=F"
+  range_days: 30
+
+logging:
+  level: "INFO"
+  file: "app.log"
