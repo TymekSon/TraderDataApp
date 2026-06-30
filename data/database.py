@@ -2,39 +2,57 @@
 
 import sqlite3
 import logging
+import threading
 from typing import Any, Dict, List, Optional, Union
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("DB")
 
 
 class Database:
-    """Manages SQLite database connection and operations."""
+    """Manages SQLite database connection and operations.
+
+    Uses thread‑local connections so that each Flask/Dash worker thread
+    gets its own connection (SQLite connections are not thread‑safe).
+    """
 
     def __init__(self, db_path: str):
         self.db_path = db_path
-        self.conn: Optional[sqlite3.Connection] = None
+        self._local = threading.local()
 
-    def connect(self) -> sqlite3.Connection:
-        """Create and return a database connection."""
-        if self.conn is None:
-            self.conn = sqlite3.connect(self.db_path)
-            self.conn.row_factory = sqlite3.Row
-            self.conn.execute("PRAGMA journal_mode=WAL")
-            logger.info("Connected to database: %s", self.db_path)
-        return self.conn
+    # ------------------------------------------------------------------
+    # Connection management (thread‑local)
+    # ------------------------------------------------------------------
+
+    def _get_conn(self) -> sqlite3.Connection:
+        """Return the connection for the current thread (create if needed)."""
+        if not hasattr(self._local, "conn") or self._local.conn is None:
+            conn = sqlite3.connect(self.db_path, check_same_thread=False)
+            conn.row_factory = sqlite3.Row
+            conn.execute("PRAGMA journal_mode=WAL")
+            conn.execute("PRAGMA busy_timeout=5000")
+            self._local.conn = conn
+            logger.info(
+                "DB connection opened for thread %s", threading.current_thread().name
+            )
+        return self._local.conn
 
     def close(self) -> None:
-        """Close the database connection."""
-        if self.conn:
-            self.conn.close()
-            self.conn = None
-            logger.info("Database connection closed.")
+        """Close the connection for the current thread."""
+        conn = getattr(self._local, "conn", None)
+        if conn:
+            conn.close()
+            self._local.conn = None
+            logger.info("DB connection closed.")
+
+    # ------------------------------------------------------------------
+    # Query helpers
+    # ------------------------------------------------------------------
 
     def execute(
         self, query: str, params: Optional[Union[tuple, Dict[str, Any]]] = None
     ) -> sqlite3.Cursor:
         """Execute a single query with optional parameters."""
-        conn = self.connect()
+        conn = self._get_conn()
         cursor = conn.execute(query, params or ())
         conn.commit()
         return cursor
@@ -69,16 +87,12 @@ class Database:
         data: Dict[str, Any],
         conflict_columns: List[str],
     ) -> None:
-        """Insert or update a row using ON CONFLICT upsert logic.
-
-        Args:
-            table: Target table name.
-            data: Column-value mapping.
-            conflict_columns: Columns that define a unique conflict.
-        """
+        """Insert or update a row using ON CONFLICT upsert logic."""
         columns = ", ".join(data.keys())
         placeholders = ", ".join("?" for _ in data)
-        updates = ", ".join(f"{col}=excluded.{col}" for col in data if col not in conflict_columns)
+        updates = ", ".join(
+            f"{col}=excluded.{col}" for col in data if col not in conflict_columns
+        )
         conflict_target = ", ".join(conflict_columns)
 
         query = (

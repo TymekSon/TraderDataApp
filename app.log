@@ -677,3 +677,684 @@ requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.
 2026-06-30 23:14:49,199 [INFO] YFINANCE: [YFINANCE] Fetched 64 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
 2026-06-30 23:14:49,210 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:14:49] "POST /_dash-update-component HTTP/1.1" 200 -
 2026-06-30 23:15:05,970 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:15:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:21:10,615 [INFO] data.database: Connected to database: data/analytics.db
+2026-06-30 23:21:10,616 [INFO] data.db_init: Database initialised: data/analytics.db
+2026-06-30 23:21:10,724 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:21:10,724 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:21:10,748 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:21:10,749 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-30 23:21:26,716 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:26] "GET / HTTP/1.1" 200 -
+2026-06-30 23:21:26,746 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:26] "[36mGET /assets/style.css?m=1782852704.0053992 HTTP/1.1[0m" 304 -
+2026-06-30 23:21:26,906 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:26] "GET /_dash-layout HTTP/1.1" 200 -
+2026-06-30 23:21:26,907 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:26] "GET /_dash-dependencies HTTP/1.1" 200 -
+2026-06-30 23:21:27,369 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:21:27,408 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:27] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-06-30 23:21:27,414 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:27] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-06-30 23:21:27,419 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:27] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-06-30 23:21:27,422 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:21:27,423 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:27] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-06-30 23:21:27,758 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:21:28,759 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:21:29,161 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:21:29,234 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:21:29,247 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 194, in populate_fomc_list
+    rows = db.fetch_all("SELECT COUNT(*) AS cnt FROM fomc_statements")
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23980 and this is thread id 28088.
+2026-06-30 23:21:29,252 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:21:31,161 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:21:31,542 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:21:31,543 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 72, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-06-30
+2026-06-30 23:21:31,547 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:31] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:21:31,987 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:21:31,989 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 199, in populate_fomc_list
+    rows = db.fetch_all(
+        "SELECT id, date, title FROM fomc_statements ORDER BY date DESC"
+    )
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 23980 and this is thread id 6904.
+2026-06-30 23:21:31,993 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:31] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:21:32,004 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:32] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-06-30 23:21:32,007 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:32] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2026-06-30 23:21:32,009 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:21:32,016 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:32] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2026-06-30 23:21:32,498 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:21:32,567 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:21:35,980 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:21:36,189 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:21:36,197 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:36] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:21:54,291 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-16 to 2026-06-30
+2026-06-30 23:21:54,530 [INFO] YFINANCE: [YFINANCE] Fetched 64 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:21:54,542 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:21:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:23:14,125 [INFO] data.database: Connected to database: data/analytics.db
+2026-06-30 23:23:14,126 [INFO] data.db_init: Database initialised: data/analytics.db
+2026-06-30 23:23:14,216 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:23:14,217 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:23:14,243 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:23:14,243 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-30 23:23:26,805 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-21 to 2026-06-30
+2026-06-30 23:23:27,559 [INFO] YFINANCE: [YFINANCE] Fetched 44 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:23:27,631 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:23:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:23:28,642 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-19 to 2026-06-30
+2026-06-30 23:23:28,895 [INFO] YFINANCE: [YFINANCE] Fetched 46 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:23:28,907 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:23:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:23:33,186 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-23 to 2026-06-30
+2026-06-30 23:23:33,403 [INFO] YFINANCE: [YFINANCE] Fetched 37 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:23:33,410 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:23:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:23:35,409 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:23:35,607 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:23:35,622 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:23:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:23:41,877 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-16 to 2026-06-30
+2026-06-30 23:23:42,094 [INFO] YFINANCE: [YFINANCE] Fetched 64 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:23:42,138 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:23:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:23:53,653 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:23:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:23:53,666 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 194, in populate_fomc_list
+    rows = db.fetch_all("SELECT COUNT(*) AS cnt FROM fomc_statements")
+  File "C:\py\TraderDataApp\data\database.py", line 46, in fetch_all
+    cursor = self.execute(query, params)
+  File "C:\py\TraderDataApp\data\database.py", line 38, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4488 and this is thread id 30248.
+2026-06-30 23:23:53,672 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:23:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:26:48,478 [INFO] DB: DB connection opened for thread MainThread
+2026-06-30 23:26:48,479 [INFO] DB: Database initialised: data/analytics.db
+2026-06-30 23:26:48,576 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:26:48,576 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:26:48,594 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:26:48,594 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-30 23:26:56,584 [INFO] DB: DB connection opened for thread Thread-2 (process_request_thread)
+2026-06-30 23:26:56,592 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:26:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:26:56,592 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:26:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:26:56,620 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:26:57,262 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:26:57,337 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:26:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:27:01,003 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:27:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:27:01,021 [INFO] DB: DB connection opened for thread Thread-11 (process_request_thread)
+2026-06-30 23:27:01,025 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:27:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:27:02,523 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:27:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:27:02,535 [INFO] DB: DB connection opened for thread Thread-13 (process_request_thread)
+2026-06-30 23:27:02,537 [INFO] app.callbacks: [FOMC] No statements in DB — starting scrape…
+2026-06-30 23:27:02,538 [INFO] FOMC: [FOMC] Fetching calendar from https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2026-06-30 23:27:03,158 [INFO] FOMC: [FOMC] Found 52 statement links on calendar page
+2026-06-30 23:27:03,161 [INFO] FOMC: [FOMC] Found 52 new statement(s) to fetch
+2026-06-30 23:27:03,161 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm
+2026-06-30 23:27:03,732 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm (date=2026-06-17)
+2026-06-30 23:27:03,734 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 197, in populate_fomc_list
+    _scrape_fomc_statements(db)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "C:\py\TraderDataApp\app\callbacks.py", line 35, in _scrape_fomc_statements
+    db.upsert(
+    ~~~~~~~~~^
+        "fomc_statements",
+        ^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        conflict_columns=["url"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\py\TraderDataApp\data\database.py", line 102, in upsert
+    self.execute(query, tuple(data.values()))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\data\database.py", line 56, in execute
+    cursor = conn.execute(query, params or ())
+sqlite3.OperationalError: ON CONFLICT clause does not match any PRIMARY KEY or UNIQUE constraint
+2026-06-30 23:27:03,739 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:27:03] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:28:49,541 [INFO] DB: DB connection opened for thread MainThread
+2026-06-30 23:28:49,541 [INFO] DB: Database initialised: data/analytics.db
+2026-06-30 23:28:49,649 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:28:49,649 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:28:49,671 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:28:49,671 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-30 23:28:54,383 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:28:54] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-06-30 23:28:56,877 [INFO] DB: DB connection opened for thread Thread-3 (process_request_thread)
+2026-06-30 23:28:56,881 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:28:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:28:56,882 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:28:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:28:56,908 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:28:57,489 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:28:57,570 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:28:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:28:58,406 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:28:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:28:58,421 [INFO] DB: DB connection opened for thread Thread-12 (process_request_thread)
+2026-06-30 23:28:58,422 [INFO] app.callbacks: [FOMC] No statements in DB — starting scrape…
+2026-06-30 23:28:58,425 [INFO] FOMC: [FOMC] Fetching calendar from https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+2026-06-30 23:28:59,036 [INFO] FOMC: [FOMC] Found 52 statement links on calendar page
+2026-06-30 23:28:59,038 [INFO] FOMC: [FOMC] Found 52 new statement(s) to fetch
+2026-06-30 23:28:59,039 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm
+2026-06-30 23:28:59,686 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm (date=2026-06-17)
+2026-06-30 23:28:59,698 [INFO] app.callbacks: [FOMC] Inserted statement: 2026-06-17 — Federal Reserve issues FOMC statement
+2026-06-30 23:28:59,698 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm
+2026-06-30 23:29:00,346 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm (date=2026-04-29)
+2026-06-30 23:29:00,351 [INFO] app.callbacks: [FOMC] Inserted statement: 2026-04-29 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:00,352 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm
+2026-06-30 23:29:00,944 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm (date=2026-03-18)
+2026-06-30 23:29:00,951 [INFO] app.callbacks: [FOMC] Inserted statement: 2026-03-18 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:00,951 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm
+2026-06-30 23:29:01,603 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm (date=2026-01-28)
+2026-06-30 23:29:01,610 [INFO] app.callbacks: [FOMC] Inserted statement: 2026-01-28 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:01,610 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128b.htm
+2026-06-30 23:29:02,145 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128b.htm (date=2026-01-28)
+2026-06-30 23:29:02,150 [INFO] app.callbacks: [FOMC] Inserted statement: 2026-01-28 — Federal Open Market Committee reaffirms its "Statement on Longer-Run Goals and Monetary Policy Strategy"
+2026-06-30 23:29:02,150 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm
+2026-06-30 23:29:02,566 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm (date=2025-12-10)
+2026-06-30 23:29:02,571 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-12-10 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:02,571 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm
+2026-06-30 23:29:02,992 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm (date=2025-10-29)
+2026-06-30 23:29:03,001 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-10-29 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:03,002 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a.htm
+2026-06-30 23:29:03,453 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a.htm (date=2025-09-17)
+2026-06-30 23:29:03,458 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-09-17 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:03,458 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm
+2026-06-30 23:29:03,905 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm (date=2025-08-22)
+2026-06-30 23:29:03,910 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-08-22 — Federal Open Market Committee announces approval of updates to its Statement on Longer-Run Goals and Monetary Policy Strategy
+2026-06-30 23:29:03,910 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a.htm
+2026-06-30 23:29:04,328 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a.htm (date=2025-07-30)
+2026-06-30 23:29:04,334 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-07-30 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:04,334 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a.htm
+2026-06-30 23:29:04,766 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a.htm (date=2025-06-18)
+2026-06-30 23:29:04,772 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-06-18 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:04,772 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm
+2026-06-30 23:29:05,186 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm (date=2025-05-07)
+2026-06-30 23:29:05,192 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-05-07 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:05,192 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm
+2026-06-30 23:29:05,622 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm (date=2025-03-19)
+2026-06-30 23:29:05,627 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-03-19 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:05,627 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a.htm
+2026-06-30 23:29:06,036 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a.htm (date=2025-01-29)
+2026-06-30 23:29:06,041 [INFO] app.callbacks: [FOMC] Inserted statement: 2025-01-29 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:06,041 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a.htm
+2026-06-30 23:29:06,451 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a.htm (date=2024-12-18)
+2026-06-30 23:29:06,456 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-12-18 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:06,457 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm
+2026-06-30 23:29:06,872 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm (date=2024-11-07)
+2026-06-30 23:29:06,877 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-11-07 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:06,877 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm
+2026-06-30 23:29:07,330 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm (date=2024-09-18)
+2026-06-30 23:29:07,335 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-09-18 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:07,335 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a.htm
+2026-06-30 23:29:07,767 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a.htm (date=2024-07-31)
+2026-06-30 23:29:07,772 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-07-31 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:07,773 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a.htm
+2026-06-30 23:29:08,185 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a.htm (date=2024-06-12)
+2026-06-30 23:29:08,189 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-06-12 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:08,190 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240501a.htm
+2026-06-30 23:29:08,637 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240501a.htm (date=2024-05-01)
+2026-06-30 23:29:08,643 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-05-01 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:08,643 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a.htm
+2026-06-30 23:29:09,108 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a.htm (date=2024-03-20)
+2026-06-30 23:29:09,112 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-03-20 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:09,113 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a.htm
+2026-06-30 23:29:09,549 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a.htm (date=2024-01-31)
+2026-06-30 23:29:09,553 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-01-31 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:09,553 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131b.htm
+2026-06-30 23:29:09,967 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131b.htm (date=2024-01-31)
+2026-06-30 23:29:09,972 [INFO] app.callbacks: [FOMC] Inserted statement: 2024-01-31 — Federal Open Market Committee reaffirms its "Statement on Longer-Run Goals and Monetary Policy Strategy"
+2026-06-30 23:29:09,972 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a.htm
+2026-06-30 23:29:10,411 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a.htm (date=2023-12-13)
+2026-06-30 23:29:10,417 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-12-13 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:10,417 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20231101a.htm
+2026-06-30 23:29:10,839 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20231101a.htm (date=2023-11-01)
+2026-06-30 23:29:10,844 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-11-01 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:10,844 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm
+2026-06-30 23:29:11,267 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm (date=2023-09-20)
+2026-06-30 23:29:11,272 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-09-20 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:11,272 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm
+2026-06-30 23:29:11,665 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm (date=2023-07-26)
+2026-06-30 23:29:11,671 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-07-26 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:11,671 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm
+2026-06-30 23:29:12,323 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm (date=2023-06-14)
+2026-06-30 23:29:12,329 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-06-14 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:12,329 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm
+2026-06-30 23:29:12,783 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm (date=2023-05-03)
+2026-06-30 23:29:12,788 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-05-03 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:12,789 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm
+2026-06-30 23:29:13,214 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm (date=2023-03-22)
+2026-06-30 23:29:13,219 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-03-22 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:13,219 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a.htm
+2026-06-30 23:29:13,671 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a.htm (date=2023-02-01)
+2026-06-30 23:29:13,675 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-02-01 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:13,676 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201b.htm
+2026-06-30 23:29:14,108 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201b.htm (date=2023-02-01)
+2026-06-30 23:29:14,113 [INFO] app.callbacks: [FOMC] Inserted statement: 2023-02-01 — Federal Open Market Committee reaffirms its "Statement on Longer-Run Goals and Monetary Policy Strategy"
+2026-06-30 23:29:14,113 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm
+2026-06-30 23:29:14,519 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm (date=2022-12-14)
+2026-06-30 23:29:14,525 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-12-14 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:14,525 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a.htm
+2026-06-30 23:29:14,958 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a.htm (date=2022-11-02)
+2026-06-30 23:29:14,963 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-11-02 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:14,964 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a.htm
+2026-06-30 23:29:15,387 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a.htm (date=2022-09-21)
+2026-06-30 23:29:15,392 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-09-21 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:15,392 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a.htm
+2026-06-30 23:29:15,829 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a.htm (date=2022-07-27)
+2026-06-30 23:29:15,834 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-07-27 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:15,834 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm
+2026-06-30 23:29:16,251 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm (date=2022-06-15)
+2026-06-30 23:29:16,256 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-06-15 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:16,256 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a.htm
+2026-06-30 23:29:16,681 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a.htm (date=2022-05-04)
+2026-06-30 23:29:16,686 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-05-04 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:16,687 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504b.htm
+2026-06-30 23:29:17,127 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504b.htm (date=2022-05-04)
+2026-06-30 23:29:17,132 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-05-04 — Plans for Reducing the Size of the Federal Reserve's Balance Sheet
+2026-06-30 23:29:17,132 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm
+2026-06-30 23:29:17,624 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm (date=2022-03-16)
+2026-06-30 23:29:17,629 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-03-16 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:17,630 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a.htm
+2026-06-30 23:29:18,028 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a.htm (date=2022-01-26)
+2026-06-30 23:29:18,032 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-01-26 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:18,032 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126b.htm
+2026-06-30 23:29:18,427 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126b.htm (date=2022-01-26)
+2026-06-30 23:29:18,432 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-01-26 — Federal Open Market Committee reaffirms its "Statement on Longer-Run Goals and Monetary Policy Strategy"
+2026-06-30 23:29:18,432 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126c.htm
+2026-06-30 23:29:18,854 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126c.htm (date=2022-01-26)
+2026-06-30 23:29:18,859 [INFO] app.callbacks: [FOMC] Inserted statement: 2022-01-26 — Principles for Reducing the Size of the Federal Reserve's Balance Sheet
+2026-06-30 23:29:18,859 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm
+2026-06-30 23:29:19,284 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm (date=2021-12-15)
+2026-06-30 23:29:19,288 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-12-15 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:19,289 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm
+2026-06-30 23:29:19,708 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm (date=2021-11-03)
+2026-06-30 23:29:19,714 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-11-03 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:19,714 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm
+2026-06-30 23:29:20,148 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm (date=2021-09-22)
+2026-06-30 23:29:20,152 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-09-22 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:20,153 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a.htm
+2026-06-30 23:29:20,611 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a.htm (date=2021-07-28)
+2026-06-30 23:29:20,616 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-07-28 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:20,616 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a.htm
+2026-06-30 23:29:21,031 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a.htm (date=2021-06-16)
+2026-06-30 23:29:21,037 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-06-16 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:21,037 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a.htm
+2026-06-30 23:29:21,590 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a.htm (date=2021-04-28)
+2026-06-30 23:29:21,596 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-04-28 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:21,596 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a.htm
+2026-06-30 23:29:22,272 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a.htm (date=2021-03-17)
+2026-06-30 23:29:22,277 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-03-17 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:22,278 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm
+2026-06-30 23:29:22,849 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm (date=2021-01-27)
+2026-06-30 23:29:22,859 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-01-27 — Federal Reserve issues FOMC statement
+2026-06-30 23:29:22,859 [INFO] FOMC: [FOMC] Fetching statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127b.htm
+2026-06-30 23:29:23,558 [INFO] FOMC: [FOMC] Successfully fetched statement from https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127b.htm (date=2021-01-27)
+2026-06-30 23:29:23,564 [INFO] app.callbacks: [FOMC] Inserted statement: 2021-01-27 — Federal Open Market Committee reaffirms its "Statement on Longer-Run Goals and Monetary Policy Strategy"
+2026-06-30 23:29:23,565 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:29:23,578 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:29:26,195 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:29:27,460 [INFO] DB: DB connection opened for thread Thread-15 (process_request_thread)
+2026-06-30 23:29:27,461 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 3 (2026-03-18)
+2026-06-30 23:29:27,463 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 240, in show_fomc_diff
+    return html.Div(dangerously_set_inner_HTML=diff_html), info
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\development\base_component.py", line 504, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\html\Div.py", line 179, in __init__
+    super(Div, self).__init__(children=children, **args)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\development\base_component.py", line 204, in __init__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: The `html.Div` component (version 4.3.0) received an unexpected keyword argument: `dangerously_set_inner_HTML`
+Allowed arguments: accessKey, aria-*, children, className, contentEditable, data-*, dir, disable_n_clicks, draggable, hidden, id, key, lang, n_clicks, n_clicks_timestamp, role, spellCheck, style, tabIndex, title
+2026-06-30 23:29:27,469 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:27] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:29:41,091 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:29:41,523 [INFO] DB: DB connection opened for thread Thread-17 (process_request_thread)
+2026-06-30 23:29:41,524 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 2 (2026-04-29)
+2026-06-30 23:29:41,526 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 240, in show_fomc_diff
+    return html.Div(dangerously_set_inner_HTML=diff_html), info
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\development\base_component.py", line 504, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\html\Div.py", line 179, in __init__
+    super(Div, self).__init__(children=children, **args)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\development\base_component.py", line 204, in __init__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: The `html.Div` component (version 4.3.0) received an unexpected keyword argument: `dangerously_set_inner_HTML`
+Allowed arguments: accessKey, aria-*, children, className, contentEditable, data-*, dir, disable_n_clicks, draggable, hidden, id, key, lang, n_clicks, n_clicks_timestamp, role, spellCheck, style, tabIndex, title
+2026-06-30 23:29:41,530 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:41] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:29:42,102 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:29:42,427 [INFO] DB: DB connection opened for thread Thread-19 (process_request_thread)
+2026-06-30 23:29:42,427 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 3 (2026-03-18)
+2026-06-30 23:29:42,429 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 240, in show_fomc_diff
+    return html.Div(dangerously_set_inner_HTML=diff_html), info
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\development\base_component.py", line 504, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\html\Div.py", line 179, in __init__
+    super(Div, self).__init__(children=children, **args)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\development\base_component.py", line 204, in __init__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: The `html.Div` component (version 4.3.0) received an unexpected keyword argument: `dangerously_set_inner_HTML`
+Allowed arguments: accessKey, aria-*, children, className, contentEditable, data-*, dir, disable_n_clicks, draggable, hidden, id, key, lang, n_clicks, n_clicks_timestamp, role, spellCheck, style, tabIndex, title
+2026-06-30 23:29:42,432 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:42] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:29:42,980 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:29:44,691 [INFO] DB: DB connection opened for thread Thread-21 (process_request_thread)
+2026-06-30 23:29:44,691 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 3 (2026-03-18)
+2026-06-30 23:29:44,693 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 240, in show_fomc_diff
+    return html.Div(dangerously_set_inner_HTML=diff_html), info
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\development\base_component.py", line 504, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\html\Div.py", line 179, in __init__
+    super(Div, self).__init__(children=children, **args)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\development\base_component.py", line 204, in __init__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: The `html.Div` component (version 4.3.0) received an unexpected keyword argument: `dangerously_set_inner_HTML`
+Allowed arguments: accessKey, aria-*, children, className, contentEditable, data-*, dir, disable_n_clicks, draggable, hidden, id, key, lang, n_clicks, n_clicks_timestamp, role, spellCheck, style, tabIndex, title
+2026-06-30 23:29:44,696 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:29:44] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-06-30 23:32:27,804 [INFO] DB: DB connection opened for thread MainThread
+2026-06-30 23:32:27,804 [INFO] DB: Database initialised: data/analytics.db
+2026-06-30 23:32:27,906 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:32:27,907 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:32:27,930 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:32:27,930 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-30 23:32:34,893 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:35,581 [INFO] DB: DB connection opened for thread Thread-2 (process_request_thread)
+2026-06-30 23:32:35,582 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 3 (2026-03-18)
+2026-06-30 23:32:35,585 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:35,698 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:35] "GET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1" 200 -
+2026-06-30 23:32:35,767 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:35] "GET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1" 200 -
+2026-06-30 23:32:48,651 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:49,371 [INFO] DB: DB connection opened for thread Thread-6 (process_request_thread)
+2026-06-30 23:32:49,372 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 2 (2026-04-29)
+2026-06-30 23:32:49,375 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:53,411 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:54,026 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:54,866 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:55,454 [INFO] DB: DB connection opened for thread Thread-10 (process_request_thread)
+2026-06-30 23:32:55,454 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 2 (2026-04-29)
+2026-06-30 23:32:55,458 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:56,386 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:56,881 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:57,306 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:32:57,778 [INFO] DB: DB connection opened for thread Thread-14 (process_request_thread)
+2026-06-30 23:32:57,779 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 2 (2026-04-29)
+2026-06-30 23:32:57,782 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:32:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:13,073 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:13,076 [INFO] DB: DB connection opened for thread Thread-16 (process_request_thread)
+2026-06-30 23:35:13,079 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:13,103 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:35:13,857 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:35:13,858 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:13,924 [INFO] DB: DB connection opened for thread Thread-25 (process_request_thread)
+2026-06-30 23:35:13,929 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:13,976 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:14,517 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:14,544 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:35:14,811 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:35:14,827 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:15,742 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:15,757 [INFO] DB: DB connection opened for thread Thread-35 (process_request_thread)
+2026-06-30 23:35:15,759 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:35:15,772 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:35:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:54:02,690 [INFO] DB: DB connection opened for thread MainThread
+2026-06-30 23:54:02,690 [INFO] DB: Database initialised: data/analytics.db
+2026-06-30 23:54:02,784 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:54:02,785 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:54:02,802 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:54:02,803 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-30 23:54:10,219 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:54:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:54:10,772 [INFO] DB: DB connection opened for thread Thread-2 (process_request_thread)
+2026-06-30 23:54:10,773 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 2 (2026-04-29)
+2026-06-30 23:54:10,860 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:54:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:54:15,937 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:54:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:54:16,857 [INFO] DB: DB connection opened for thread Thread-4 (process_request_thread)
+2026-06-30 23:54:16,858 [INFO] app.callbacks: [FOMC] Comparing statement 2 (2026-04-29) vs 3 (2026-03-18)
+2026-06-30 23:54:16,924 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:54:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:54:51,782 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:54:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:54:52,371 [INFO] DB: DB connection opened for thread Thread-6 (process_request_thread)
+2026-06-30 23:54:52,372 [INFO] app.callbacks: [FOMC] Comparing statement 2 (2026-04-29) vs 5 (2026-01-28)
+2026-06-30 23:54:52,431 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:54:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:55:16,970 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:55:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:55:18,818 [INFO] DB: DB connection opened for thread Thread-8 (process_request_thread)
+2026-06-30 23:55:18,818 [INFO] app.callbacks: [FOMC] Comparing statement 2 (2026-04-29) vs 4 (2026-01-28)
+2026-06-30 23:55:18,878 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:55:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:55:41,651 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:55:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:55:41,655 [INFO] DB: DB connection opened for thread Thread-10 (process_request_thread)
+2026-06-30 23:55:41,657 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:55:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:55:41,682 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:55:42,377 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:55:42,451 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:55:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:55:44,265 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-06-30
+2026-06-30 23:55:44,485 [INFO] YFINANCE: [YFINANCE] Fetched 135 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:55:44,499 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:55:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:56:04,563 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-16 to 2026-06-30
+2026-06-30 23:56:04,782 [INFO] YFINANCE: [YFINANCE] Fetched 64 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:56:04,789 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:56:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:56:06,897 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-15 to 2026-06-30
+2026-06-30 23:56:07,103 [INFO] YFINANCE: [YFINANCE] Fetched 70 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:56:07,110 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:56:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:56:07,818 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-13 to 2026-06-30
+2026-06-30 23:56:08,058 [INFO] YFINANCE: [YFINANCE] Fetched 72 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:56:08,070 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:56:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:56:14,906 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-16 to 2026-06-30
+2026-06-30 23:56:15,129 [INFO] YFINANCE: [YFINANCE] Fetched 64 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:56:15,147 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:56:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:56:16,377 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-15 to 2026-06-30
+2026-06-30 23:56:16,587 [INFO] YFINANCE: [YFINANCE] Fetched 70 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:56:16,594 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:56:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:56:18,537 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-14 to 2026-06-30
+2026-06-30 23:56:18,757 [INFO] YFINANCE: [YFINANCE] Fetched 71 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:56:18,763 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:56:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:56:23,177 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-13 to 2026-06-30
+2026-06-30 23:56:23,391 [INFO] YFINANCE: [YFINANCE] Fetched 72 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-06-30 23:56:23,397 [INFO] werkzeug: 127.0.0.1 - - [30/Jun/2026 23:56:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-06-30 23:56:50,537 [INFO] DB: DB connection opened for thread MainThread
+2026-06-30 23:56:50,537 [INFO] DB: Database initialised: data/analytics.db
+2026-06-30 23:56:50,661 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-06-30 23:56:50,662 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-06-30 23:56:50,683 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-06-30 23:56:50,683 [INFO] werkzeug: [33mPress CTRL+C to quit[0m

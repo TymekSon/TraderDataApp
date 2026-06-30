@@ -17,7 +17,7 @@ forexfactory:
 
 fomc:
   url: "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-  statement_selector: "div.col-xs-12 col-sm-8 col-md-8" 
+  statement_selector: "div.col-xs-12.col-sm-8.col-md-8" 
   xPath: /html/body/div[7]/div[2]/div/div[3]
 
 markets:

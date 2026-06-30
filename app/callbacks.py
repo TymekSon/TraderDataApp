@@ -17,6 +17,34 @@ from utils.diff_utils import generate_diff_html
 logger = logging.getLogger(__name__)
 
 
+def _scrape_fomc_statements(db):
+    """Scrape FOMC statements from the Fed website and insert into DB."""
+    scraper = FOMCScraper()
+    existing = db.fetch_all("SELECT url FROM fomc_statements")
+    existing_urls = {r["url"] for r in existing}
+
+    new_links = scraper.update_statements(existing_urls)
+    if not new_links:
+        logger.info("[FOMC] No new statements to fetch.")
+        return
+
+    for link in new_links:
+        result = scraper.fetch_statement_with_date(link["url"])
+        if result is None:
+            continue
+        db.upsert(
+            "fomc_statements",
+            {
+                "date": result["date"],
+                "title": result["title"],
+                "content": result["content"],
+                "url": result["url"],
+            },
+            conflict_columns=["date", "url"],
+        )
+        logger.info("[FOMC] Inserted statement: %s — %s", result["date"], result["title"])
+
+
 def register_callbacks(dash_app, db: Database, config: dict):
     """Attach all Dash callbacks to the app instance."""
 
@@ -160,7 +188,14 @@ def register_callbacks(dash_app, db: Database, config: dict):
         Input("tabs", "value"),
     )
     def populate_fomc_list(tab_value):
-        """Populate checklist with statements; reset selection on tab switch."""
+        """Populate checklist with statements; auto-scrape if DB is empty."""
+        # ── Auto‑scrape when entering the FOMC tab ──────────────────
+        if tab_value == "tab-fomc":
+            rows = db.fetch_all("SELECT COUNT(*) AS cnt FROM fomc_statements")
+            if rows and rows[0]["cnt"] == 0:
+                logger.info("[FOMC] No statements in DB — starting scrape…")
+                _scrape_fomc_statements(db)
+
         rows = db.fetch_all(
             "SELECT id, date, title FROM fomc_statements ORDER BY date DESC"
         )
@@ -202,4 +237,19 @@ def register_callbacks(dash_app, db: Database, config: dict):
 
         diff_html = generate_diff_html(old_row["content"], new_row["content"])
         info = f"Comparing: {old_row['date']} ← → {new_row['date']}"
-        return html.Div(dangerously_set_inner_HTML=diff_html), info
+
+        # Render raw HTML inside an iframe (safe & reliable in Dash 4.x)
+        srcdoc = f"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {{ font-family: Arial, sans-serif; line-height: 1.6; padding: 10px; white-space: pre-wrap; }}
+</style>
+</head>
+<body>{diff_html}</body>
+</html>"""
+        return html.Iframe(
+            srcDoc=srcdoc,
+            style={"width": "100%", "height": "600px", "border": "1px solid #ddd", "borderRadius": 6},
+        ), info

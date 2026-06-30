@@ -8,7 +8,7 @@ import yaml
 from data.db_init import init_db
 from app.callbacks import register_callbacks
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("DASHBOARD")
 
 
 def create_app(config_path: str = "config.yaml") -> dash.Dash:
