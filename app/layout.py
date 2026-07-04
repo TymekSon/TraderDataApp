@@ -95,11 +95,6 @@ markets_tab = html.Div(
                         marks={7: "7d", 14: "14d", 30: "30d", 60: "60d", 90: "90d"},
                     ),
                 ]),
-                dcc.Checklist(
-                    id="market-normalise",
-                    options=[{"label": "Normalise (start = 100%)", "value": "normalise"}],
-                    value=[],
-                ),
             ],
         ),
     ]

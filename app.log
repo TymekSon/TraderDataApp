@@ -1657,3 +1657,861 @@ requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.
 2026-07-01 00:20:00,183 [INFO] DB: DB connection opened for thread Thread-108 (process_request_thread)
 2026-07-01 00:20:00,184 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:20:00] "POST /_dash-update-component HTTP/1.1" 200 -
 2026-07-01 00:20:00,207 [INFO] werkzeug: 127.0.0.1 - - [01/Jul/2026 00:20:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:05:30,312 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 16:05:30,313 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 16:05:30,862 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 16:05:30,864 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 16:05:30,935 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 16:05:30,936 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 16:05:42,982 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:05:42] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 16:05:44,449 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:05:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:05:44,484 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:05:44,512 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:05:44] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-07-04 16:05:44,591 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:05:44] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2026-07-04 16:05:45,018 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:05:45] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2026-07-04 16:05:47,603 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:05:47,605 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:05:47,612 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:05:47,614 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:05:47,693 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:05:47,707 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:05:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:05:50,792 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:05:51,070 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:05:51,070 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:05:51,075 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:05:51,076 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:05:51,085 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:05:51,089 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:05:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:00,095 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:00,117 [INFO] DB: DB connection opened for thread Thread-21 (process_request_thread)
+2026-07-04 16:06:00,125 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:00,139 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:01,855 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:02,312 [INFO] DB: DB connection opened for thread Thread-24 (process_request_thread)
+2026-07-04 16:06:02,312 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 2 (2026-04-29)
+2026-07-04 16:06:02,313 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:06,745 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:07,159 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:09,223 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:09,226 [INFO] DB: DB connection opened for thread Thread-28 (process_request_thread)
+2026-07-04 16:06:09,228 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:09,251 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:06:09,497 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:06:09,497 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:06:09,506 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:06:09,507 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:06:09,516 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:06:09,518 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:10,415 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:10,432 [INFO] DB: DB connection opened for thread Thread-39 (process_request_thread)
+2026-07-04 16:06:10,434 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:10,471 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:10] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-07-04 16:06:11,207 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:11] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-07-04 16:06:11,478 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:11,507 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:06:11,784 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:06:11,785 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:06:11,793 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:06:11,794 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:06:11,804 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:06:11,807 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:14,013 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:06:14,303 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:06:14,304 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:06:14,310 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:06:14,311 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:06:14,316 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:06:14,319 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:20,606 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-18 to 2026-07-04
+2026-07-04 16:06:20,962 [INFO] YFINANCE: [YFINANCE] Fetched 67 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:06:20,963 [INFO] app.callbacks: [MARKETS] Raw data: 67 rows, 6 symbols
+2026-07-04 16:06:20,967 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-18 to 2026-06-26
+2026-07-04 16:06:20,968 [INFO] app.callbacks: [MARKETS] After alignment: 39 rows (was 67)
+2026-07-04 16:06:20,975 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:06:20,977 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:47,091 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:47,134 [INFO] DB: DB connection opened for thread Thread-63 (process_request_thread)
+2026-07-04 16:06:47,135 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:49,134 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:49,154 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:49,201 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:49] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-07-04 16:06:49,479 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:50,479 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:50,558 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:50,587 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:06:50,755 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:50,862 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:06:50,862 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:06:50,866 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:06:50,867 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:06:50,871 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:06:50,874 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:51,520 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:51,537 [INFO] DB: DB connection opened for thread Thread-76 (process_request_thread)
+2026-07-04 16:06:51,539 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:52,110 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:52,127 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:52,367 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:52,756 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:53,000 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:53,001 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 72, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:53,039 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 16:06:53,368 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:53,623 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:55,340 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:55,355 [INFO] DB: DB connection opened for thread Thread-80 (process_request_thread)
+2026-07-04 16:06:55,356 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:55,372 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:55,623 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:55,854 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:55,854 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 72, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:06:55,856 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:55] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 16:06:58,176 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:58,179 [INFO] DB: DB connection opened for thread Thread-83 (process_request_thread)
+2026-07-04 16:06:58,182 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:06:58,204 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:06:58,418 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:06:58,419 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:06:58,423 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:06:58,423 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:06:58,429 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:06:58,432 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:07:00,949 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:07:01,223 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:07:01,223 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:07:01,228 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:07:01,228 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:07:01,234 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:07:01,236 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:07:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:09:45,220 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:09:45] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 16:30:44,281 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:30:44] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 16:30:45,144 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:30:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:30:45,163 [INFO] DB: DB connection opened for thread Thread-101 (process_request_thread)
+2026-07-04 16:30:45,165 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:30:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:30:45,178 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:30:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:30:46,410 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:30:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:30:46,412 [INFO] DB: DB connection opened for thread Thread-104 (process_request_thread)
+2026-07-04 16:30:46,414 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:30:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:30:46,444 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:30:46,731 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:30:46,731 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:30:46,737 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:30:46,738 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:30:46,742 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:30:46,745 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:30:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:55:10,381 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 16:55:10,382 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 16:55:10,512 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 16:55:10,513 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 16:55:10,529 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 16:55:10,529 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 16:55:13,000 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:13] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 16:55:16,195 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:16] "GET / HTTP/1.1" 200 -
+2026-07-04 16:55:16,234 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:16] "[36mGET /assets/style.css?m=1782852704.0053992 HTTP/1.1[0m" 304 -
+2026-07-04 16:55:16,397 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:16] "GET /_dash-layout HTTP/1.1" 200 -
+2026-07-04 16:55:16,398 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:16] "GET /_dash-dependencies HTTP/1.1" 200 -
+2026-07-04 16:55:16,979 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:55:17,038 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:17] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 16:55:17,045 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:17] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-07-04 16:55:17,048 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:17] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-07-04 16:55:17,054 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:17] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-07-04 16:55:17,066 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:55:17,374 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:55:18,375 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:55:18,602 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:55:20,337 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:55:20,351 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:20] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-07-04 16:55:20,352 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:20] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2026-07-04 16:55:20,358 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:20] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2026-07-04 16:55:20,359 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:55:20,603 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:55:20,853 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:55:20,853 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 72, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:55:20,865 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 16:55:20,926 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:55:20,930 [INFO] DB: DB connection opened for thread Thread-16 (process_request_thread)
+2026-07-04 16:55:21,212 [INFO] app.callbacks: [MARKETS] Saved 131 rows to market_prices
+2026-07-04 16:55:21,213 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:55:21,217 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:55:21,218 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:55:21,257 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:55:21,265 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:55:23,017 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:55:23,268 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:55:23,274 [INFO] DB: DB connection opened for thread Thread-23 (process_request_thread)
+2026-07-04 16:55:23,513 [INFO] app.callbacks: [MARKETS] Saved 131 rows to market_prices
+2026-07-04 16:55:23,513 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:55:23,519 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:55:23,520 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:55:23,526 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:55:23,529 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:55:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:57:58,836 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-04
+2026-07-04 16:57:59,097 [INFO] YFINANCE: [YFINANCE] Fetched 125 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:57:59,107 [INFO] DB: DB connection opened for thread Thread-30 (process_request_thread)
+2026-07-04 16:57:59,330 [INFO] app.callbacks: [MARKETS] Saved 125 rows to market_prices
+2026-07-04 16:57:59,330 [INFO] app.callbacks: [MARKETS] Raw data: 125 rows, 6 symbols
+2026-07-04 16:57:59,335 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-05 to 2026-06-26
+2026-07-04 16:57:59,335 [INFO] app.callbacks: [MARKETS] After alignment: 97 rows (was 125)
+2026-07-04 16:57:59,343 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:57:59,345 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:57:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:58:10,223 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 16:58:10,224 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 16:58:10,317 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 16:58:10,318 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 16:58:10,334 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 16:58:10,335 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 16:58:14,058 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "GET / HTTP/1.1" 200 -
+2026-07-04 16:58:14,110 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "[36mGET /assets/style.css?m=1782852704.0053992 HTTP/1.1[0m" 304 -
+2026-07-04 16:58:14,277 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "GET /_dash-layout HTTP/1.1" 200 -
+2026-07-04 16:58:14,279 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "GET /_dash-dependencies HTTP/1.1" 200 -
+2026-07-04 16:58:14,770 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:58:14,804 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 16:58:14,820 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-07-04 16:58:14,822 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-07-04 16:58:14,823 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:58:14,826 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:14] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-07-04 16:58:15,085 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:58:16,085 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:58:16,324 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:58:17,215 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:58:17,230 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:17] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-07-04 16:58:17,234 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 16:58:17,236 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:17] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2026-07-04 16:58:17,240 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:17] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2026-07-04 16:58:17,755 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:58:17,756 [INFO] DB: DB connection opened for thread Thread-15 (process_request_thread)
+2026-07-04 16:58:17,998 [INFO] app.callbacks: [MARKETS] Saved 131 rows to market_prices
+2026-07-04 16:58:17,999 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 16:58:18,004 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-04 to 2026-06-26
+2026-07-04 16:58:18,005 [INFO] app.callbacks: [MARKETS] After alignment: 103 rows (was 131)
+2026-07-04 16:58:18,053 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:58:18,066 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:58:18,325 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:58:18,606 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:58:18,606 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 72, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 16:58:18,610 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 16:58:23,255 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-05-31 to 2026-07-04
+2026-07-04 16:58:23,525 [INFO] YFINANCE: [YFINANCE] Fetched 150 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:58:23,536 [INFO] DB: DB connection opened for thread Thread-22 (process_request_thread)
+2026-07-04 16:58:23,803 [INFO] app.callbacks: [MARKETS] Saved 150 rows to market_prices
+2026-07-04 16:58:23,803 [INFO] app.callbacks: [MARKETS] Raw data: 150 rows, 6 symbols
+2026-07-04 16:58:23,808 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-01 to 2026-06-26
+2026-07-04 16:58:23,808 [INFO] app.callbacks: [MARKETS] After alignment: 121 rows (was 150)
+2026-07-04 16:58:23,814 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:58:23,817 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 16:58:25,302 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-18 to 2026-07-04
+2026-07-04 16:58:25,533 [INFO] YFINANCE: [YFINANCE] Fetched 67 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 16:58:25,540 [INFO] DB: DB connection opened for thread Thread-29 (process_request_thread)
+2026-07-04 16:58:25,666 [INFO] app.callbacks: [MARKETS] Saved 67 rows to market_prices
+2026-07-04 16:58:25,667 [INFO] app.callbacks: [MARKETS] Raw data: 67 rows, 6 symbols
+2026-07-04 16:58:25,671 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-18 to 2026-06-26
+2026-07-04 16:58:25,672 [INFO] app.callbacks: [MARKETS] After alignment: 39 rows (was 67)
+2026-07-04 16:58:25,677 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 16:58:25,680 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 16:58:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:03:15,373 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-18 to 2026-07-04
+2026-07-04 17:03:15,633 [INFO] YFINANCE: [YFINANCE] Fetched 67 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:03:15,645 [INFO] DB: DB connection opened for thread Thread-36 (process_request_thread)
+2026-07-04 17:03:15,795 [INFO] app.callbacks: [MARKETS] Saved 67 rows to market_prices
+2026-07-04 17:03:15,795 [INFO] app.callbacks: [MARKETS] Raw data: 67 rows, 6 symbols
+2026-07-04 17:03:15,806 [INFO] app.callbacks: [MARKETS] Common range: 2026-06-18 to 2026-06-26
+2026-07-04 17:03:15,807 [INFO] app.callbacks: [MARKETS] After alignment: 39 rows (was 67)
+2026-07-04 17:03:15,817 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 17:03:15,823 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:03:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:04:22,388 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 17:04:22,388 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 17:04:22,572 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 17:04:22,573 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 17:04:22,604 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 17:04:22,604 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 17:04:30,037 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:30] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 17:04:33,056 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "GET / HTTP/1.1" 200 -
+2026-07-04 17:04:33,094 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "[36mGET /assets/style.css?m=1782852704.0053992 HTTP/1.1[0m" 304 -
+2026-07-04 17:04:33,259 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "GET /_dash-layout HTTP/1.1" 200 -
+2026-07-04 17:04:33,260 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "GET /_dash-dependencies HTTP/1.1" 200 -
+2026-07-04 17:04:33,813 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:04:33,827 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 17:04:33,840 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-07-04 17:04:33,844 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-07-04 17:04:33,848 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:04:33,850 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:33] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-07-04 17:04:34,188 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:04:34,912 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:04:34,929 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:34] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-07-04 17:04:34,934 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 17:04:34,935 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:34] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2026-07-04 17:04:34,940 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:34] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2026-07-04 17:04:35,189 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:04:35,448 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:04:35,514 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:04:35,516 [INFO] DB: DB connection opened for thread Thread-16 (process_request_thread)
+2026-07-04 17:04:35,770 [INFO] app.callbacks: [MARKETS] Saved 131 rows to market_prices
+2026-07-04 17:04:35,771 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 17:04:35,806 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 17:04:35,814 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:04:37,449 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:04:37,694 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:04:37,695 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 72, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:04:37,699 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:37] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 17:04:57,704 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-07 to 2026-07-04
+2026-07-04 17:04:57,961 [INFO] YFINANCE: [YFINANCE] Fetched 118 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:04:57,970 [INFO] DB: DB connection opened for thread Thread-23 (process_request_thread)
+2026-07-04 17:04:58,181 [INFO] app.callbacks: [MARKETS] Saved 118 rows to market_prices
+2026-07-04 17:04:58,182 [INFO] app.callbacks: [MARKETS] Raw data: 118 rows, 6 symbols
+2026-07-04 17:04:58,186 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 17:04:58,189 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:04:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:06:01,940 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 17:06:01,940 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 17:06:02,070 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 17:06:02,070 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 17:06:02,087 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 17:06:02,087 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 17:06:06,839 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:06] "GET / HTTP/1.1" 200 -
+2026-07-04 17:06:06,874 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:06] "[36mGET /assets/style.css?m=1782852704.0053992 HTTP/1.1[0m" 304 -
+2026-07-04 17:06:07,023 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:07] "GET /_dash-layout HTTP/1.1" 200 -
+2026-07-04 17:06:07,025 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:07] "GET /_dash-dependencies HTTP/1.1" 200 -
+2026-07-04 17:06:07,575 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:06:07,578 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:07] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 17:06:07,608 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:06:07,610 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:07] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-07-04 17:06:07,617 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:07] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-07-04 17:06:07,622 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:07] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-07-04 17:06:07,920 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:06:08,920 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:06:08,921 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:06:08,936 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:08] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-07-04 17:06:08,942 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 17:06:08,943 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:08] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2026-07-04 17:06:08,948 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:08] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2026-07-04 17:06:09,243 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:06:09,473 [INFO] YFINANCE: [YFINANCE] Fetched 131 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:06:09,474 [INFO] DB: DB connection opened for thread Thread-15 (process_request_thread)
+2026-07-04 17:06:09,745 [INFO] app.callbacks: [MARKETS] Saved 131 rows to market_prices
+2026-07-04 17:06:09,746 [INFO] app.callbacks: [MARKETS] Raw data: 131 rows, 6 symbols
+2026-07-04 17:06:09,796 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-04 17:06:09,809 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:06:11,244 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:06:11,516 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:06:11,517 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 72, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:06:11,520 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:06:11] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 17:09:17,666 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 17:09:17,666 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 17:09:17,801 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 17:09:17,801 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 17:09:17,828 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 17:09:17,828 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 17:09:22,658 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:22] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 17:09:23,711 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:09:23,730 [INFO] DB: DB connection opened for thread Thread-3 (process_request_thread)
+2026-07-04 17:09:23,732 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:09:23,748 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:09:24,515 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:09:24,519 [INFO] DB: DB connection opened for thread Thread-6 (process_request_thread)
+2026-07-04 17:09:24,521 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:09:24,551 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 17:09:25,322 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 126, in update_market_chart
+    df = fetcher.fetch_prices(symbols, start=start, end=end)
+  File "C:\py\TraderDataApp\fetchers\yfinance_fetcher.py", line 66, in fetch_prices
+    data = data.dropna(subset=["Close"])
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py", line 7801, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['Close']
+2026-07-04 17:09:25,327 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:25] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 17:09:35,082 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "GET / HTTP/1.1" 200 -
+2026-07-04 17:09:35,115 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "[36mGET /assets/style.css?m=1782852704.0053992 HTTP/1.1[0m" 304 -
+2026-07-04 17:09:35,300 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "GET /_dash-layout HTTP/1.1" 200 -
+2026-07-04 17:09:35,301 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "GET /_dash-dependencies HTTP/1.1" 200 -
+2026-07-04 17:09:35,858 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:09:35,875 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 17:09:35,891 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-07-04 17:09:35,892 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-07-04 17:09:35,894 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:09:35,895 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:35] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-07-04 17:09:36,226 [WARNING] SCRAPER: Attempt 1/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:09:37,057 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:09:37,067 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:37] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-07-04 17:09:37,074 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 17:09:37,076 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:37] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2026-07-04 17:09:37,080 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:37] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2026-07-04 17:09:37,226 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:09:37,253 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 126, in update_market_chart
+    df = fetcher.fetch_prices(symbols, start=start, end=end)
+  File "C:\py\TraderDataApp\fetchers\yfinance_fetcher.py", line 66, in fetch_prices
+    data = data.dropna(subset=["Close"])
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py", line 7801, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['Close']
+2026-07-04 17:09:37,255 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:37] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 17:09:37,506 [WARNING] SCRAPER: Attempt 2/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:09:39,506 [INFO] FOREX: Fetching Forex Factory calendar from https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:09:39,772 [WARNING] SCRAPER: Attempt 3/3 failed for _fetch_raw: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:09:39,772 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 72, in refresh_calendar
+    rows = scraper.get_calendar()
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 38, in get_calendar
+    raw = self._fetch_raw(start, end)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 60, in wrapper
+    raise last_exc  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "C:\py\TraderDataApp\scrapers\base.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "C:\py\TraderDataApp\scrapers\forex_factory.py", line 51, in _fetch_raw
+    return fetch_page(url)
+  File "C:\py\TraderDataApp\scrapers\base.py", line 29, in fetch_page
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-04
+2026-07-04 17:09:39,775 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:09:39] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 17:10:19,577 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:10:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:10:19,596 [INFO] DB: DB connection opened for thread Thread-26 (process_request_thread)
+2026-07-04 17:10:19,598 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:10:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:10:19,617 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:10:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:10:20,707 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:10:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:10:20,710 [INFO] DB: DB connection opened for thread Thread-29 (process_request_thread)
+2026-07-04 17:10:20,712 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:10:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:10:20,743 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 17:10:21,057 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 126, in update_market_chart
+    df = fetcher.fetch_prices(symbols, start=start, end=end)
+  File "C:\py\TraderDataApp\fetchers\yfinance_fetcher.py", line 66, in fetch_prices
+    data = data.dropna(subset=["Close"])
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py", line 7801, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['Close']
+2026-07-04 17:10:21,059 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:10:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 17:11:31,383 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 17:11:31,383 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 17:11:31,483 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 17:11:31,484 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 17:11:31,505 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 17:11:31,506 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 17:11:34,372 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:34] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 17:11:39,462 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:39,477 [INFO] DB: DB connection opened for thread Thread-3 (process_request_thread)
+2026-07-04 17:11:39,479 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:39,492 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:41,786 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:42,202 [INFO] DB: DB connection opened for thread Thread-6 (process_request_thread)
+2026-07-04 17:11:42,202 [INFO] app.callbacks: [FOMC] Comparing statement 1 (2026-06-17) vs 2 (2026-04-29)
+2026-07-04 17:11:42,203 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:42,993 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:43,361 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:43,959 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:43,963 [INFO] DB: DB connection opened for thread Thread-10 (process_request_thread)
+2026-07-04 17:11:43,964 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:11:43,994 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 17:11:44,496 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 264, in _dispatch
+    response_data = ctx.run(partial_func)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 783, in add_context
+    raise err
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 774, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\_callback.py", line 58, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\py\TraderDataApp\app\callbacks.py", line 126, in update_market_chart
+    df = fetcher.fetch_prices(symbols, start=start, end=end)
+  File "C:\py\TraderDataApp\fetchers\yfinance_fetcher.py", line 73, in fetch_prices
+    data = data.dropna(subset=["close"])
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py", line 7801, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['close']
+2026-07-04 17:11:44,503 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:11:44] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-04 17:13:12,065 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 17:13:12,065 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 17:13:12,167 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 17:13:12,168 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 17:13:12,188 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 17:13:12,189 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 17:13:14,839 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:13:14] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 17:13:15,591 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:13:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:13:15,605 [INFO] DB: DB connection opened for thread Thread-3 (process_request_thread)
+2026-07-04 17:13:15,607 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:13:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:13:15,624 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:13:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:13:16,432 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:13:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:13:16,437 [INFO] DB: DB connection opened for thread Thread-6 (process_request_thread)
+2026-07-04 17:13:16,439 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:13:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:13:16,471 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 17:13:17,017 [WARNING] YFINANCE: [YFINANCE] No close column found for ^TNX (columns: ['^TNX', '^TNX', '^TNX', '^TNX', '^TNX'])
+2026-07-04 17:13:17,170 [WARNING] YFINANCE: [YFINANCE] No close column found for DX-Y.NYB (columns: ['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB'])
+2026-07-04 17:13:17,350 [WARNING] YFINANCE: [YFINANCE] No close column found for BTC-USD (columns: ['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD'])
+2026-07-04 17:13:17,532 [WARNING] YFINANCE: [YFINANCE] No close column found for GC=F (columns: ['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F'])
+2026-07-04 17:13:17,690 [WARNING] YFINANCE: [YFINANCE] No close column found for CL=F (columns: ['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F'])
+2026-07-04 17:13:17,861 [WARNING] YFINANCE: [YFINANCE] No close column found for ES=F (columns: ['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F'])
+2026-07-04 17:13:17,862 [WARNING] YFINANCE: [YFINANCE] No data returned for any of ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:13:17,862 [INFO] app.callbacks: [MARKETS] No data returned from yfinance
+2026-07-04 17:13:17,898 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:13:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:13:24,705 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-13 to 2026-07-04
+2026-07-04 17:13:24,866 [WARNING] YFINANCE: [YFINANCE] No close column found for ^TNX (columns: ['^TNX', '^TNX', '^TNX', '^TNX', '^TNX'])
+2026-07-04 17:13:25,044 [WARNING] YFINANCE: [YFINANCE] No close column found for DX-Y.NYB (columns: ['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB'])
+2026-07-04 17:13:25,204 [WARNING] YFINANCE: [YFINANCE] No close column found for BTC-USD (columns: ['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD'])
+2026-07-04 17:13:25,374 [WARNING] YFINANCE: [YFINANCE] No close column found for GC=F (columns: ['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F'])
+2026-07-04 17:13:25,522 [WARNING] YFINANCE: [YFINANCE] No close column found for CL=F (columns: ['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F'])
+2026-07-04 17:13:25,765 [WARNING] YFINANCE: [YFINANCE] No close column found for ES=F (columns: ['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F'])
+2026-07-04 17:13:25,765 [WARNING] YFINANCE: [YFINANCE] No data returned for any of ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:13:25,766 [INFO] app.callbacks: [MARKETS] No data returned from yfinance
+2026-07-04 17:13:25,768 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:13:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:14:36,379 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-13 to 2026-07-04
+2026-07-04 17:14:36,640 [WARNING] YFINANCE: [YFINANCE] No close column found for ^TNX (columns: ['^TNX', '^TNX', '^TNX', '^TNX', '^TNX'])
+2026-07-04 17:14:36,801 [WARNING] YFINANCE: [YFINANCE] No close column found for DX-Y.NYB (columns: ['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB'])
+2026-07-04 17:14:36,968 [WARNING] YFINANCE: [YFINANCE] No close column found for BTC-USD (columns: ['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD'])
+2026-07-04 17:14:37,117 [WARNING] YFINANCE: [YFINANCE] No close column found for GC=F (columns: ['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F'])
+2026-07-04 17:14:37,287 [WARNING] YFINANCE: [YFINANCE] No close column found for CL=F (columns: ['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F'])
+2026-07-04 17:14:37,450 [WARNING] YFINANCE: [YFINANCE] No close column found for ES=F (columns: ['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F'])
+2026-07-04 17:14:37,451 [WARNING] YFINANCE: [YFINANCE] No data returned for any of ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:14:37,451 [INFO] app.callbacks: [MARKETS] No data returned from yfinance
+2026-07-04 17:14:37,453 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:14:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:19:36,380 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-13 to 2026-07-04
+2026-07-04 17:19:36,572 [WARNING] YFINANCE: [YFINANCE] No close column found for ^TNX (columns: ['^TNX', '^TNX', '^TNX', '^TNX', '^TNX'])
+2026-07-04 17:19:36,751 [WARNING] YFINANCE: [YFINANCE] No close column found for DX-Y.NYB (columns: ['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB'])
+2026-07-04 17:19:36,922 [WARNING] YFINANCE: [YFINANCE] No close column found for BTC-USD (columns: ['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD'])
+2026-07-04 17:19:37,147 [WARNING] YFINANCE: [YFINANCE] No close column found for GC=F (columns: ['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F'])
+2026-07-04 17:19:37,305 [WARNING] YFINANCE: [YFINANCE] No close column found for CL=F (columns: ['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F'])
+2026-07-04 17:19:37,496 [WARNING] YFINANCE: [YFINANCE] No close column found for ES=F (columns: ['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F'])
+2026-07-04 17:19:37,497 [WARNING] YFINANCE: [YFINANCE] No data returned for any of ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:19:37,497 [INFO] app.callbacks: [MARKETS] No data returned from yfinance
+2026-07-04 17:19:37,499 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:19:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:22:28,853 [INFO] DB: DB connection opened for thread MainThread
+2026-07-04 17:22:28,854 [INFO] DB: Database initialised: data/analytics.db
+2026-07-04 17:22:28,967 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-04 17:22:28,968 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-04 17:22:28,989 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-04 17:22:28,990 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-04 17:22:30,286 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:22:30] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-04 17:22:32,183 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:22:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:22:32,208 [INFO] DB: DB connection opened for thread Thread-3 (process_request_thread)
+2026-07-04 17:22:32,209 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:22:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:22:33,839 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:22:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:22:33,867 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-04 to 2026-07-04
+2026-07-04 17:22:35,396 [WARNING] YFINANCE: [YFINANCE] No close column found for ^TNX (columns: ['^TNX', '^TNX', '^TNX', '^TNX', '^TNX'])
+2026-07-04 17:22:36,583 [WARNING] YFINANCE: [YFINANCE] No close column found for DX-Y.NYB (columns: ['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB'])
+2026-07-04 17:22:37,754 [WARNING] YFINANCE: [YFINANCE] No close column found for BTC-USD (columns: ['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD'])
+2026-07-04 17:22:38,991 [WARNING] YFINANCE: [YFINANCE] No close column found for GC=F (columns: ['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F'])
+2026-07-04 17:22:40,230 [WARNING] YFINANCE: [YFINANCE] No close column found for CL=F (columns: ['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F'])
+2026-07-04 17:22:41,390 [WARNING] YFINANCE: [YFINANCE] No close column found for ES=F (columns: ['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F'])
+2026-07-04 17:22:41,391 [WARNING] YFINANCE: [YFINANCE] No data returned for any of ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:22:41,391 [INFO] app.callbacks: [MARKETS] No data returned from yfinance
+2026-07-04 17:22:41,427 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:22:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-04 17:22:46,080 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-15 to 2026-07-04
+2026-07-04 17:22:47,365 [WARNING] YFINANCE: [YFINANCE] No close column found for ^TNX (columns: ['^TNX', '^TNX', '^TNX', '^TNX', '^TNX'])
+2026-07-04 17:22:48,576 [WARNING] YFINANCE: [YFINANCE] No close column found for DX-Y.NYB (columns: ['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB'])
+2026-07-04 17:22:49,761 [WARNING] YFINANCE: [YFINANCE] No close column found for BTC-USD (columns: ['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD'])
+2026-07-04 17:22:50,934 [WARNING] YFINANCE: [YFINANCE] No close column found for GC=F (columns: ['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F'])
+2026-07-04 17:22:52,081 [WARNING] YFINANCE: [YFINANCE] No close column found for CL=F (columns: ['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F'])
+2026-07-04 17:22:53,245 [WARNING] YFINANCE: [YFINANCE] No close column found for ES=F (columns: ['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F'])
+2026-07-04 17:22:53,245 [WARNING] YFINANCE: [YFINANCE] No data returned for any of ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-04 17:22:53,246 [INFO] app.callbacks: [MARKETS] No data returned from yfinance
+2026-07-04 17:22:53,247 [INFO] werkzeug: 127.0.0.1 - - [04/Jul/2026 17:22:53] "POST /_dash-update-component HTTP/1.1" 200 -

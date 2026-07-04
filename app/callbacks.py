@@ -102,9 +102,9 @@ def register_callbacks(dash_app, db: Database, config: dict):
     @dash_app.callback(
         Output("market-chart", "figure"),
         Input("market-range-slider", "value"),
-        Input("market-normalise", "value"),
+        Input("interval-refresh", "n_intervals"),
     )
-    def update_market_chart(range_days, normalise):
+    def update_market_chart(range_days, n_intervals):
         import plotly.graph_objects as go
 
         symbols = config.get("markets", {}).get("symbols", [])
@@ -130,28 +130,26 @@ def register_callbacks(dash_app, db: Database, config: dict):
             fig.update_layout(title="Market Prices — no data available")
             return fig
 
-        normalise_flag = "normalise" in (normalise or [])
+        # ── Persist to database ───────────────────────────────────
+        for _, row in df.iterrows():
+            db.upsert(
+                "market_prices",
+                {
+                    "symbol": row["symbol"],
+                    "date": row["date"],
+                    "open": row.get("open"),
+                    "high": row.get("high"),
+                    "low": row.get("low"),
+                    "close": row.get("close"),
+                    "volume": row.get("volume"),
+                },
+                conflict_columns=["symbol", "date"],
+            )
+        logger.info("[MARKETS] Saved %d rows to market_prices", len(df))
 
         logger.info("[MARKETS] Raw data: %d rows, %d symbols", len(df), df["symbol"].nunique())
 
-        # ── Align all series to a common date range ────────────────
-        date_ranges = {}
-        for symbol in symbols:
-            sym_df = df[df["symbol"] == symbol].dropna(subset=["close"])
-            if not sym_df.empty:
-                date_ranges[symbol] = (
-                    sym_df["date"].min(), sym_df["date"].max()
-                )
-
-        if len(date_ranges) > 1:
-            common_start = max(d[0] for d in date_ranges.values())
-            common_end = min(d[1] for d in date_ranges.values())
-            logger.info("[MARKETS] Common range: %s to %s", common_start, common_end)
-            if common_start <= common_end:
-                before = len(df)
-                df = df[(df["date"] >= common_start) & (df["date"] <= common_end)]
-                logger.info("[MARKETS] After alignment: %d rows (was %d)", len(df), before)
-
+        # ── Plot each symbol with its own full date range ──────────
         fig = go.Figure()
 
         for symbol in symbols:
@@ -164,7 +162,7 @@ def register_callbacks(dash_app, db: Database, config: dict):
             dates = sym_df["date"].tolist()
             closes = sym_df["close"].tolist()
 
-            if normalise_flag and closes and closes[0] != 0:
+            if closes and closes[0] != 0:
                 base = closes[0]
                 values = [(c / base) * 100 for c in closes]
             else:
@@ -184,7 +182,7 @@ def register_callbacks(dash_app, db: Database, config: dict):
         fig.update_layout(
             title="Market Prices",
             xaxis_title="Date",
-            yaxis_title="Normalised Price" if normalise_flag else "Price (USD)",
+            yaxis_title="Normalised Price (start = 100%)",
             hovermode="x unified",
         )
         return fig
