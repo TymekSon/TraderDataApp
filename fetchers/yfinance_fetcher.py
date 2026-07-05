@@ -55,7 +55,7 @@ class YFinanceFetcher:
                     auto_adjust=True,
                     progress=False,
                 )
-                time.sleep(1)
+                time.sleep(0.05)
             except Exception as exc:
                 logger.warning("[YFINANCE] Failed to download %s: %s", symbol, exc)
                 continue
@@ -65,9 +65,26 @@ class YFinanceFetcher:
                 continue
 
             # Normalise columns – yfinance may return MultiIndex even for
-            # a single ticker, e.g. columns = [('^TNX','Close'), ...]
+            # a single ticker. Print structure so we can pick the right level.
             if isinstance(data.columns, pd.MultiIndex):
-                data.columns = data.columns.droplevel(0)
+                logger.info(
+                    "[YFINANCE] %s MultiIndex levels=%d, level0=%s, level1=%s",
+                    symbol,
+                    data.columns.nlevels,
+                    list(data.columns.get_level_values(0)),
+                    list(data.columns.get_level_values(1)),
+                )
+                # Determine which level has OHLCV names by checking which
+                # level's values contain typical OHLCV strings.
+                level0 = data.columns.get_level_values(0)
+                level1 = data.columns.get_level_values(1)
+                ohlcv_kw = {"open", "high", "low", "close", "volume", "adj close"}
+                score0 = sum(1 for v in level0 if str(v).strip().lower() in ohlcv_kw)
+                score1 = sum(1 for v in level1 if str(v).strip().lower() in ohlcv_kw)
+                data.columns = level0 if score0 >= score1 else level1
+                logger.info("[YFINANCE] %s → using level with score=%d", symbol, max(score0, score1))
+            else:
+                logger.info("[YFINANCE] %s flat columns: %s", symbol, list(data.columns))
 
             # Map known OHLCV columns to canonical lowercase names,
             # matching regardless of formatting (e.g. "Adj Close",
