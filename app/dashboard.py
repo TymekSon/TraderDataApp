@@ -20,7 +20,8 @@ def create_app(config_path: str = "config.yaml") -> dash.Dash:
 
     # ── Initialise database ─────────────────────────────────────────
     db_path = config.get("database", {}).get("path", "data/analytics.db")
-    db = init_db(db_path)
+    csv_folder = "scrapers/forex-factory-scraper/datasets"
+    db = init_db(db_path, csv_folder=csv_folder)
 
     # ── Create Dash instance ────────────────────────────────────────
     app = dash.Dash(

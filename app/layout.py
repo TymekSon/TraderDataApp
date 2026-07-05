@@ -24,6 +24,8 @@ layout = html.Div(
             ],
         ),
         html.Div(id="tab-content", style={"padding": "20px 10px"}),
+        # macro-charts always in DOM – avoids race condition with switch_tab
+        html.Div(id="macro-charts"),
         # Hidden store for intermediary data
         dcc.Store(id="store-data"),
         # Interval for periodic refresh (optional)
@@ -60,20 +62,8 @@ calendar_tab = html.Div(
 
 macro_tab = html.Div(
     [
-        html.H3("Latest Macroeconomic Indicators"),
+        html.H3("Macroeconomic Indicators — Actual vs Forecast"),
         html.Button("Refresh", id="btn-refresh-macro", n_clicks=0),
-        dash_table.DataTable(
-            id="macro-table",
-            columns=[
-                {"name": "Indicator", "id": "event_name"},
-                {"name": "Date", "id": "date"},
-                {"name": "Actual", "id": "actual"},
-                {"name": "Forecast", "id": "forecast"},
-                {"name": "Previous", "id": "previous"},
-            ],
-            style_table={"overflowX": "auto"},
-            style_cell={"textAlign": "center", "padding": "5px"},
-        ),
     ]
 )
 

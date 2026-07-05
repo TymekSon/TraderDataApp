@@ -3,17 +3,22 @@ database:
 
 forexfactory:
   url: "https://www.forexfactory.com/calendar"
+  currency: "USD"
   events:
-    - "CPI"
+    - "CPI y/y"
     - "CPI m/m"
     - "PPI m/m"
+    - "Core PCE Price Index m/m"
+    - "GDP"
     - "Non-Farm Employment Change"
     - "Unemployment Rate"
-    - "GDP"
-    - "Core Retail Sales"
-    - "Core PCE Price Index m/m"
     - "ISM Manufacturing PMI"
     - "ISM Services PMI"
+    - "Retail Sales"
+    - "FOMC"
+    - "Federal Reserve"
+    - "Jackson Hole"
+    - "Bank Holiday"
 
 fomc:
   url: "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"

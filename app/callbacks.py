@@ -51,10 +51,47 @@ def register_callbacks(dash_app, db: Database, config: dict):
     # ------------------------------------------------------------------
     # Tab switching
     # ------------------------------------------------------------------
-    @dash_app.callback(Output("tab-content", "children"), Input("tabs", "value"))
+    @dash_app.callback(
+        Output("tab-content", "children"),
+        Input("tabs", "value"),
+    )
     def switch_tab(tab_id: str):
-        from app.layout import TAB_LAYOUTS  # avoid circular import at top level
+        from app.layout import TAB_LAYOUTS
         return TAB_LAYOUTS.get(tab_id, html.Div("Unknown tab"))
+
+    # Show/hide macro-charts (always in DOM, race-condition-free)
+    @dash_app.callback(
+        Output("macro-charts", "style"),
+        Input("tabs", "value"),
+    )
+    def toggle_macro_charts(tab_id: str):
+        visible = tab_id == "tab-macro"
+        logger.info("[MACRO] toggle_macro_charts: tab=%s visible=%s", tab_id, visible)
+        if visible:
+            return {"padding": "0 10px", "display": "block"}
+        return {"display": "none"}
+
+    # ------------------------------------------------------------------
+    # Helper: save scraped rows to DB
+    # ------------------------------------------------------------------
+    def _save_to_db(rows):
+        for row in rows:
+            db.upsert(
+                "forex_calendar",
+                {
+                    "date": row.get("date", ""),
+                    "time": row.get("time", ""),
+                    "currency": row.get("currency", "USD"),
+                    "event_name": row.get("event_name", ""),
+                    "event_category": row.get("event_category", ""),
+                    "importance": row.get("importance", "None"),
+                    "actual": row.get("actual", ""),
+                    "forecast": row.get("forecast", ""),
+                    "previous": row.get("previous", ""),
+                    "unit": row.get("unit", ""),
+                },
+                conflict_columns=["date", "time", "currency", "event_name"],
+            )
 
     # ------------------------------------------------------------------
     # Economic Calendar tab
@@ -67,34 +104,116 @@ def register_callbacks(dash_app, db: Database, config: dict):
     )
     def refresh_calendar(n_clicks, start_date, end_date):
         scraper = ForexFactoryScraper(
-            events=config.get("forexfactory", {}).get("events", [])
+            currency=config.get("forexfactory", {}).get("currency", "USD"),
         )
-        rows = scraper.get_calendar()
+        rows = scraper.get_calendar(start_date=start_date, end_date=end_date)
+        _save_to_db(rows)
+        logger.info("[CALENDAR] Saved %d events to database", len(rows))
         return rows
 
     # ------------------------------------------------------------------
     # Macro dashboard tab
     # ------------------------------------------------------------------
+    MACRO_INDICATORS = [
+        "CPI y/y",
+        "CPI m/m",
+        "PPI m/m",
+        "Core PCE Price Index m/m",
+        "GDP",
+        "Non-Farm Employment Change",
+        "Unemployment Rate",
+        "ISM Manufacturing PMI",
+        "ISM Services PMI",
+        "Retail Sales",
+    ]
+
     @dash_app.callback(
-        Output("macro-table", "data"),
+        Output("macro-charts", "children"),
         Input("btn-refresh-macro", "n_clicks"),
+        Input("tabs", "value"),
     )
-    def refresh_macro(n_clicks):
-        rows = db.fetch_all(
-            """
-            SELECT event_name, date, actual, forecast, previous
-            FROM forex_calendar
-            WHERE event_name IN (
-                'CPI','CPI m/m','PPI m/m','Non-Farm Employment Change',
-                'Unemployment Rate','GDP','Core Retail Sales',
-                'Core PCE Price Index m/m','ISM Manufacturing PMI',
-                'ISM Services PMI'
+    def refresh_macro(n_clicks, tab_value):
+        import plotly.graph_objects as go
+        from dash import dcc
+
+        logger.info("[MACRO] refresh_macro fired: tab=%s", tab_value)
+
+        # ── Auto‑scrape when entering macro tab ──────────────────
+        if tab_value == "tab-macro":
+            matching = db.fetch_one(
+                "SELECT COUNT(*) AS n FROM forex_calendar "
+                "WHERE event_category IN ({})".format(
+                    ",".join("?" for _ in MACRO_INDICATORS)
+                ),
+                tuple(MACRO_INDICATORS),
             )
-            ORDER BY date DESC
-            LIMIT 20
-            """
-        )
-        return rows
+            match_n = matching["n"] if matching else 0
+            logger.info("[MACRO] DB matching events: %d", match_n)
+            if match_n < 20:
+                logger.info(
+                    "[MACRO] %d matching in DB — scraping 2016→today+30d", match_n
+                )
+                scraper = ForexFactoryScraper(
+                    currency=config.get("forexfactory", {}).get("currency", "USD"),
+                )
+                year_start = date(2016, 7, 1)
+                year_end = date.today() + timedelta(days=30)
+                rows = scraper.get_calendar(start_date=year_start, end_date=year_end)
+                _save_to_db(rows)
+                logger.info("[MACRO] Scraped %d events", len(rows))
+
+        # ── Generate charts from DB ──────────────────────────────
+        charts = []
+        for ind in MACRO_INDICATORS:
+            rows = db.fetch_all(
+                "SELECT date, actual, forecast FROM forex_calendar "
+                "WHERE event_category = ? AND actual != '' ORDER BY date ASC",
+                (ind,),
+            )
+            if not rows:
+                logger.info("[MACRO] No data for %s", ind)
+                continue
+
+            logger.info("[MACRO] %s: %d rows, first=%s last=%s",
+                         ind, len(rows), rows[0]["date"], rows[-1]["date"])
+
+            dates = [r["date"] for r in rows]
+            actuals, forecasts = [], []
+            for r in rows:
+                try:
+                    actuals.append(float(r["actual"].replace("%", "").replace("K", "").replace("M", "").replace("B", "")))
+                except (ValueError, AttributeError):
+                    actuals.append(None)
+                try:
+                    forecasts.append(float(r["forecast"].replace("%", "").replace("K", "").replace("M", "").replace("B", "")))
+                except (ValueError, AttributeError):
+                    forecasts.append(None)
+
+            fig = go.Figure()
+            fig.add_trace(go.Scatter(
+                x=dates, y=actuals, mode="lines+markers", name="Actual",
+                line=dict(color="#1f77b4", width=2), marker=dict(size=6),
+            ))
+            fig.add_trace(go.Scatter(
+                x=dates, y=forecasts, mode="lines+markers", name="Forecast",
+                line=dict(color="#1f77b4", width=2, dash="dot"),
+                marker=dict(size=4, symbol="circle-open"), opacity=0.5,
+            ))
+            fig.update_layout(
+                title=ind, height=250,
+                margin=dict(l=40, r=20, t=40, b=30),
+                legend=dict(orientation="h", y=1.1),
+                hovermode="x unified", template="plotly_white",
+            )
+            charts.append(dcc.Graph(figure=fig))
+
+        if not charts:
+            return html.Div(
+                "No macro data — scrape in progress or DB empty. Click Refresh.",
+                style={"padding": 20, "fontSize": 16, "color": "#888"},
+            )
+
+        return html.Div(charts, style={"display": "flex", "flexDirection": "column", "gap": "10px"})
 
     # ------------------------------------------------------------------
     # Markets tab – chart

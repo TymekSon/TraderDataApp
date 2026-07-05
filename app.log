@@ -3092,3 +3092,775 @@ Traceback (most recent call last):
     raise HTTPError(http_error_msg, response=self)
 requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.forexfactory.com/calendar?day=2026-07-05
 2026-07-05 17:03:34,012 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:03:34] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 17:15:17,479 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 17:15:17,480 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 17:15:17,595 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 17:15:17,596 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 17:15:17,612 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 17:15:17,612 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 17:15:32,007 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:32] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:15:33,002 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:15:34,012 [INFO] FOREX: [FOREX] Fetched 108 events from https://www.forexfactory.com/calendar?week=jun29.2026
+2026-07-05 17:15:34,751 [INFO] FOREX: [FOREX] Fetched 74 events from https://www.forexfactory.com/calendar?week=jul06.2026
+2026-07-05 17:15:34,751 [INFO] FOREX: [FOREX] Total unique events scraped: 182
+2026-07-05 17:15:34,752 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:15:38,387 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:15:38,415 [INFO] DB: DB connection opened for thread Thread-5 (process_request_thread)
+2026-07-05 17:15:38,416 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:15:39,212 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:15:39,243 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 17:15:39,995 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:15:40,020 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 17:15:40,039 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 17:15:40,279 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 17:15:40,279 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 17:15:40,531 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 17:15:40,532 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 17:15:40,764 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 17:15:40,766 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 17:15:40,891 [INFO] FOREX: [FOREX] Fetched 108 events from https://www.forexfactory.com/calendar?week=jun29.2026
+2026-07-05 17:15:41,090 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 17:15:41,090 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 17:15:41,339 [INFO] FOREX: [FOREX] Fetched 74 events from https://www.forexfactory.com/calendar?week=jul06.2026
+2026-07-05 17:15:41,339 [INFO] FOREX: [FOREX] Total unique events scraped: 182
+2026-07-05 17:15:41,340 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:15:41,403 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 17:15:41,403 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 17:15:41,410 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 17:15:41,412 [INFO] DB: DB connection opened for thread Thread-7 (process_request_thread)
+2026-07-05 17:15:41,655 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 17:15:41,655 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 17:15:41,699 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 17:15:41,707 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:15:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:18:51,515 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:18:51] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:22:32,076 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:22:32] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:22:33,646 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:22:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:22:33,671 [INFO] DB: DB connection opened for thread Thread-19 (process_request_thread)
+2026-07-05 17:22:33,672 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:22:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:27:35,507 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:27:35] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:27:36,956 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:27:36] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:27:37,828 [INFO] FOREX: [FOREX] Fetched 108 events from https://www.forexfactory.com/calendar?week=jun29.2026
+2026-07-05 17:27:38,273 [INFO] FOREX: [FOREX] Fetched 74 events from https://www.forexfactory.com/calendar?week=jul06.2026
+2026-07-05 17:27:38,273 [INFO] FOREX: [FOREX] Total unique events scraped: 182
+2026-07-05 17:27:38,273 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:27:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:27:40,460 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:27:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:27:40,473 [INFO] DB: DB connection opened for thread Thread-24 (process_request_thread)
+2026-07-05 17:27:40,475 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:27:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:27:47,146 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 17:27:47,146 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 17:27:47,319 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 17:27:47,320 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 17:27:47,341 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 17:27:47,341 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 17:28:05,566 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:28:05,596 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 17:28:06,141 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 17:28:06,142 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 17:28:06,382 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 17:28:06,382 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 17:28:06,602 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 17:28:06,602 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 17:28:06,824 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 17:28:06,824 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 17:28:07,100 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 17:28:07,100 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 17:28:07,329 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 17:28:07,330 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 17:28:07,334 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 17:28:07,335 [INFO] DB: DB connection opened for thread Thread-2 (process_request_thread)
+2026-07-05 17:28:07,607 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 17:28:07,607 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 17:28:07,654 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 17:28:07,667 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:28:09,198 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:28:09,227 [INFO] DB: DB connection opened for thread Thread-10 (process_request_thread)
+2026-07-05 17:28:09,230 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:28:09,239 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:28:10,220 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:28:10,933 [INFO] DB: DB connection opened for thread Thread-13 (process_request_thread)
+2026-07-05 17:28:10,933 [INFO] app.callbacks: [FOMC] Comparing statement 2 (2026-04-29) vs 3 (2026-03-18)
+2026-07-05 17:28:10,934 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:28:12,677 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:28:12,679 [INFO] DB: DB connection opened for thread Thread-15 (process_request_thread)
+2026-07-05 17:28:12,682 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:28:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:32:09,356 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:32:09] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:32:10,655 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:32:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:32:11,851 [INFO] FOREX: [FOREX] Fetched 108 events from https://www.forexfactory.com/calendar?week=jun29.2026
+2026-07-05 17:32:12,293 [INFO] FOREX: [FOREX] Fetched 74 events from https://www.forexfactory.com/calendar?week=jul06.2026
+2026-07-05 17:32:12,294 [INFO] FOREX: [FOREX] Total unique events scraped: 182
+2026-07-05 17:32:12,294 [INFO] DB: DB connection opened for thread Thread-18 (process_request_thread)
+2026-07-05 17:32:12,314 [INFO] app.callbacks: [CALENDAR] Saved 10 events to database
+2026-07-05 17:32:12,314 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:32:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:38:07,713 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:38:07] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:44:32,253 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 17:44:32,253 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 17:44:32,365 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 17:44:32,366 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 17:44:32,381 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 17:44:32,381 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 17:44:36,036 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:36] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:44:37,530 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:44:41,612 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:44:41,656 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 17:44:42,177 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 17:44:42,178 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 17:44:42,411 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 17:44:42,412 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 17:44:42,646 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 17:44:42,646 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 17:44:42,910 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 17:44:42,911 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 17:44:43,125 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 17:44:43,125 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 17:44:43,369 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 17:44:43,369 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 17:44:43,373 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 17:44:43,374 [INFO] DB: DB connection opened for thread Thread-4 (process_request_thread)
+2026-07-05 17:44:43,619 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 17:44:43,619 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 17:44:43,657 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 17:44:43,665 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:44:44,653 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:44:44,680 [INFO] DB: DB connection opened for thread Thread-12 (process_request_thread)
+2026-07-05 17:44:44,682 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:44:44,698 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:44:47,284 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:44:47,287 [INFO] DB: DB connection opened for thread Thread-15 (process_request_thread)
+2026-07-05 17:44:47,289 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:44:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:47:17,462 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:47:17] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:47:18,493 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:47:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:47:19,427 [INFO] FOREX: [FOREX] Fetched 6 events from https://www.forexfactory.com/calendar?week=jun29.2026
+2026-07-05 17:47:19,855 [INFO] FOREX: [FOREX] Fetched 4 events from https://www.forexfactory.com/calendar?week=jul06.2026
+2026-07-05 17:47:19,855 [INFO] FOREX: [FOREX] Total unique events scraped: 10
+2026-07-05 17:47:19,862 [INFO] DB: DB connection opened for thread Thread-18 (process_request_thread)
+2026-07-05 17:47:19,880 [INFO] app.callbacks: [CALENDAR] Saved 10 events to database
+2026-07-05 17:47:19,881 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:47:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:47:24,390 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:47:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:50:07,125 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:07] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:50:20,828 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:50:20,869 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 17:50:21,112 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 17:50:21,112 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 17:50:21,322 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 17:50:21,322 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 17:50:21,523 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 17:50:21,523 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 17:50:21,737 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 17:50:21,737 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 17:50:21,973 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 17:50:21,974 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 17:50:22,198 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 17:50:22,198 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 17:50:22,202 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 17:50:22,210 [INFO] DB: DB connection opened for thread Thread-22 (process_request_thread)
+2026-07-05 17:50:22,447 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 17:50:22,448 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 17:50:22,452 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 17:50:22,455 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:50:23,629 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:50:23,651 [INFO] DB: DB connection opened for thread Thread-30 (process_request_thread)
+2026-07-05 17:50:23,653 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:50:23,668 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:50:43,326 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:43] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:50:45,203 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:50:45,208 [INFO] DB: DB connection opened for thread Thread-34 (process_request_thread)
+2026-07-05 17:50:45,211 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:50:46,061 [INFO] FOREX: [FOREX] Fetched 6 events from https://www.forexfactory.com/calendar?week=jun29.2026
+2026-07-05 17:50:46,366 [INFO] FOREX: [FOREX] Fetched 4 events from https://www.forexfactory.com/calendar?week=jul06.2026
+2026-07-05 17:50:46,367 [INFO] FOREX: [FOREX] Total unique events scraped: 10
+2026-07-05 17:50:46,368 [INFO] DB: DB connection opened for thread Thread-35 (process_request_thread)
+2026-07-05 17:50:46,385 [INFO] app.callbacks: [CALENDAR] Saved 10 events to database
+2026-07-05 17:50:46,386 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:50:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:51:35,894 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:51:35] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:51:36,669 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:51:36] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:57:37,662 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 17:57:37,662 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 17:57:37,759 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 17:57:37,760 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 17:57:37,796 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 17:57:37,797 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 17:57:42,096 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:57:42] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 17:57:43,134 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:57:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:57:43,167 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 17:57:43,718 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 17:57:43,718 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 17:57:43,937 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 17:57:43,938 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 17:57:44,141 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 17:57:44,142 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 17:57:44,347 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 17:57:44,348 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 17:57:44,548 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 17:57:44,550 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 17:57:44,761 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 17:57:44,762 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 17:57:44,765 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 17:57:44,767 [INFO] DB: DB connection opened for thread Thread-3 (process_request_thread)
+2026-07-05 17:57:45,021 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 17:57:45,022 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 17:57:45,059 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 17:57:45,068 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:57:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:57:48,936 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:57:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:57:58,960 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:57:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:57:59,011 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD | patterns=40
+2026-07-05 17:58:00,289 [INFO] FOREX: [FOREX] Done: 2 weeks, 7 unique events
+2026-07-05 17:58:00,297 [INFO] DB: DB connection opened for thread Thread-12 (process_request_thread)
+2026-07-05 17:58:00,311 [INFO] app.callbacks: [CALENDAR] Saved 7 events to database
+2026-07-05 17:58:00,312 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:58:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 17:58:15,498 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD | patterns=40
+2026-07-05 17:58:16,924 [INFO] FOREX: [FOREX] Done: 2 weeks, 7 unique events
+2026-07-05 17:58:16,931 [INFO] DB: DB connection opened for thread Thread-13 (process_request_thread)
+2026-07-05 17:58:16,945 [INFO] app.callbacks: [CALENDAR] Saved 7 events to database
+2026-07-05 17:58:16,945 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 17:58:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:03:43,368 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:03:43] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:03:45,029 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:03:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:03:50,606 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:03:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:03:50,649 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD | patterns=40
+2026-07-05 18:03:51,797 [INFO] FOREX: [FOREX] Done: 2 weeks, 7 unique events
+2026-07-05 18:03:51,798 [INFO] DB: DB connection opened for thread Thread-17 (process_request_thread)
+2026-07-05 18:03:51,811 [INFO] app.callbacks: [CALENDAR] Saved 7 events to database
+2026-07-05 18:03:51,811 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:03:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:06,175 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:06,200 [INFO] DB: DB connection opened for thread Thread-19 (process_request_thread)
+2026-07-05 18:04:06,201 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:06,211 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:08,373 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:08,377 [INFO] DB: DB connection opened for thread Thread-22 (process_request_thread)
+2026-07-05 18:04:08,378 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:08,405 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 18:04:08,639 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 18:04:08,639 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 18:04:08,859 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 18:04:08,860 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 18:04:08,924 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:09,076 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 18:04:09,076 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 18:04:09,319 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 18:04:09,320 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 18:04:09,657 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 18:04:09,658 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 18:04:09,885 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:09,892 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 18:04:09,893 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 18:04:09,899 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 18:04:09,901 [INFO] DB: DB connection opened for thread Thread-23 (process_request_thread)
+2026-07-05 18:04:09,913 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 18:04:10,147 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 18:04:10,148 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 18:04:10,176 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 18:04:10,176 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 18:04:10,183 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 18:04:10,187 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:10,370 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 18:04:10,371 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 18:04:10,539 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 18:04:10,540 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 18:04:10,778 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 18:04:10,778 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 18:04:11,019 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 18:04:11,019 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 18:04:11,241 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 18:04:11,242 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 18:04:11,244 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 18:04:11,252 [INFO] DB: DB connection opened for thread Thread-32 (process_request_thread)
+2026-07-05 18:04:11,486 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 18:04:11,487 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 18:04:11,492 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 18:04:11,495 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:13,645 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:13,670 [INFO] DB: DB connection opened for thread Thread-40 (process_request_thread)
+2026-07-05 18:04:13,671 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:13,681 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:14,511 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:14,515 [INFO] DB: DB connection opened for thread Thread-43 (process_request_thread)
+2026-07-05 18:04:14,516 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:17,356 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:04:17,402 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD | patterns=40
+2026-07-05 18:04:18,487 [INFO] FOREX: [FOREX] Done: 2 weeks, 7 unique events
+2026-07-05 18:04:18,488 [INFO] DB: DB connection opened for thread Thread-45 (process_request_thread)
+2026-07-05 18:04:18,500 [INFO] app.callbacks: [CALENDAR] Saved 7 events to database
+2026-07-05 18:04:18,500 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:04:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:08:20,947 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 18:08:20,947 [INFO] DB: [DB] Old schema detected — recreating forex_calendar table
+2026-07-05 18:08:20,959 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 18:08:20,987 [INFO] DB: [DB] Imported 1139 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2010.csv
+2026-07-05 18:08:20,987 [INFO] DB: [DB] CSV import: forex_factory_calendar_2010.csv → 1139 rows
+2026-07-05 18:08:21,008 [INFO] DB: [DB] Imported 1140 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2011.csv
+2026-07-05 18:08:21,008 [INFO] DB: [DB] CSV import: forex_factory_calendar_2011.csv → 1140 rows
+2026-07-05 18:08:21,030 [INFO] DB: [DB] Imported 1130 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2012.csv
+2026-07-05 18:08:21,031 [INFO] DB: [DB] CSV import: forex_factory_calendar_2012.csv → 1130 rows
+2026-07-05 18:08:21,054 [INFO] DB: [DB] Imported 1159 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2013.csv
+2026-07-05 18:08:21,054 [INFO] DB: [DB] CSV import: forex_factory_calendar_2013.csv → 1159 rows
+2026-07-05 18:08:21,078 [INFO] DB: [DB] Imported 1132 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2014.csv
+2026-07-05 18:08:21,078 [INFO] DB: [DB] CSV import: forex_factory_calendar_2014.csv → 1132 rows
+2026-07-05 18:08:21,108 [INFO] DB: [DB] Imported 1165 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2015.csv
+2026-07-05 18:08:21,108 [INFO] DB: [DB] CSV import: forex_factory_calendar_2015.csv → 1165 rows
+2026-07-05 18:08:21,130 [INFO] DB: [DB] Imported 1156 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2016.csv
+2026-07-05 18:08:21,130 [INFO] DB: [DB] CSV import: forex_factory_calendar_2016.csv → 1156 rows
+2026-07-05 18:08:21,168 [INFO] DB: [DB] Imported 1225 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2017.csv
+2026-07-05 18:08:21,168 [INFO] DB: [DB] CSV import: forex_factory_calendar_2017.csv → 1225 rows
+2026-07-05 18:08:21,196 [INFO] DB: [DB] Imported 1176 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2018.csv
+2026-07-05 18:08:21,196 [INFO] DB: [DB] CSV import: forex_factory_calendar_2018.csv → 1176 rows
+2026-07-05 18:08:21,224 [INFO] DB: [DB] Imported 1206 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2019.csv
+2026-07-05 18:08:21,225 [INFO] DB: [DB] CSV import: forex_factory_calendar_2019.csv → 1206 rows
+2026-07-05 18:08:21,250 [INFO] DB: [DB] Imported 1239 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2020.csv
+2026-07-05 18:08:21,251 [INFO] DB: [DB] CSV import: forex_factory_calendar_2020.csv → 1239 rows
+2026-07-05 18:08:21,297 [INFO] DB: [DB] Imported 1270 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2021.csv
+2026-07-05 18:08:21,298 [INFO] DB: [DB] CSV import: forex_factory_calendar_2021.csv → 1270 rows
+2026-07-05 18:08:21,323 [INFO] DB: [DB] Imported 1219 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2022.csv
+2026-07-05 18:08:21,324 [INFO] DB: [DB] CSV import: forex_factory_calendar_2022.csv → 1219 rows
+2026-07-05 18:08:21,348 [INFO] DB: [DB] Imported 1248 rows from scrapers/forex-factory-scraper/datasets\forex_factory_calendar_2023.csv
+2026-07-05 18:08:21,348 [INFO] DB: [DB] CSV import: forex_factory_calendar_2023.csv → 1248 rows
+2026-07-05 18:08:21,348 [INFO] DB: [DB] Total CSV import: 16604 rows
+2026-07-05 18:08:21,455 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 18:08:21,455 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 18:08:21,476 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 18:08:21,477 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 18:08:37,344 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:08:37] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:08:39,029 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD (all events)
+2026-07-05 18:08:40,419 [INFO] FOREX: [FOREX] Done: 2 weeks, 43 unique events
+2026-07-05 18:08:40,430 [INFO] DB: DB connection opened for thread Thread-2 (process_request_thread)
+2026-07-05 18:08:40,516 [INFO] app.callbacks: [CALENDAR] Saved 43 events to database
+2026-07-05 18:08:40,523 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:08:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:08:43,970 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:08:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:09:45,663 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:09:45] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:09:49,222 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:09:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:09:49,251 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 18:09:49,795 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 18:09:49,796 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 18:09:50,019 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 18:09:50,020 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 18:09:50,242 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 18:09:50,243 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 18:09:50,455 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 18:09:50,455 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 18:09:50,684 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 18:09:50,684 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 18:09:50,884 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 18:09:50,885 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 18:09:50,888 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 18:09:50,898 [INFO] DB: DB connection opened for thread Thread-6 (process_request_thread)
+2026-07-05 18:09:51,152 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 18:09:51,153 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 18:09:51,190 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 18:09:51,198 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:09:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:09:54,582 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:09:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:09:54,607 [INFO] DB: DB connection opened for thread Thread-14 (process_request_thread)
+2026-07-05 18:09:54,609 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:09:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:09:54,621 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:09:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:10:01,880 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:10:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:10:01,882 [INFO] DB: DB connection opened for thread Thread-17 (process_request_thread)
+2026-07-05 18:10:01,885 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:10:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:10:02,661 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:10:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:10:02,703 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD (all events)
+2026-07-05 18:10:03,920 [INFO] FOREX: [FOREX] Done: 2 weeks, 43 unique events
+2026-07-05 18:10:03,921 [INFO] DB: DB connection opened for thread Thread-19 (process_request_thread)
+2026-07-05 18:10:03,996 [INFO] app.callbacks: [CALENDAR] Saved 43 events to database
+2026-07-05 18:10:03,997 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:10:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:10:50,785 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:10:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:12:10,085 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:12:10] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:15:32,022 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 18:15:32,023 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 18:15:32,024 [INFO] DB: [DB] Already have 16591 events — skipping CSV import
+2026-07-05 18:15:32,394 [INFO] DB: [DB] Re‑normalized 167 event categories
+2026-07-05 18:15:32,525 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 18:15:32,526 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 18:15:32,547 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 18:15:32,547 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 18:15:43,835 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:15:43] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:15:45,395 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:15:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:15:45,450 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD (all events)
+2026-07-05 18:15:46,760 [INFO] FOREX: [FOREX] Done: 2 weeks, 43 unique events
+2026-07-05 18:15:46,769 [INFO] DB: DB connection opened for thread Thread-3 (process_request_thread)
+2026-07-05 18:15:46,839 [INFO] app.callbacks: [CALENDAR] Saved 43 events to database
+2026-07-05 18:15:46,840 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:15:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:15:47,935 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:15:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:15:58,936 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:15:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:15:58,981 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 18:15:59,686 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 18:15:59,686 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 18:15:59,918 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 18:15:59,918 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 18:16:00,194 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 18:16:00,194 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 18:16:00,469 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 18:16:00,470 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 18:16:00,691 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 18:16:00,692 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 18:16:00,905 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 18:16:00,906 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 18:16:00,909 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 18:16:00,918 [INFO] DB: DB connection opened for thread Thread-6 (process_request_thread)
+2026-07-05 18:16:01,167 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 18:16:01,168 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 18:16:01,224 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 18:16:01,232 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:16:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:16:02,431 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:16:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:16:02,454 [INFO] DB: DB connection opened for thread Thread-14 (process_request_thread)
+2026-07-05 18:16:02,455 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:16:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:16:02,466 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:16:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:16:03,470 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:16:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:16:03,473 [INFO] DB: DB connection opened for thread Thread-17 (process_request_thread)
+2026-07-05 18:16:03,474 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:16:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:30:28,115 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 18:30:28,115 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 18:30:28,116 [INFO] DB: [DB] Already have 16591 events — skipping CSV import
+2026-07-05 18:30:28,263 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 18:30:28,264 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 18:30:28,286 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 18:30:28,286 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 18:30:32,841 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:30:32] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:30:38,255 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:30:38,262 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:30:38] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:30:38,805 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:30:38,806 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:30:38] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:32:46,097 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 18:32:46,098 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 18:32:46,098 [INFO] DB: [DB] Already have 16591 events — skipping CSV import
+2026-07-05 18:32:46,287 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 18:32:46,287 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 18:32:46,305 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 18:32:46,305 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 18:32:49,502 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:32:49] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:32:58,287 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:32:58,293 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:32:58] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:33:03,038 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:33:03,039 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:33:03] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:33:03,799 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:33:03,801 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:33:03] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:33:04,541 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:33:04,543 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:33:04] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:33:06,527 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:33:06,528 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:33:06] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:33:58,114 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:33:58] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:33:58,742 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:33:58,743 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:33:58] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:33:59,661 [ERROR] app.dashboard: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1543, in _prepare_callback
+    cb = self.callback_map[output]
+         ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'tab-content.children'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\backends\_flask.py", line 258, in _dispatch
+    func = dash_app._prepare_callback(cb_ctx, body)
+  File "C:\Users\chomi\AppData\Roaming\Python\Python313\site-packages\dash\dash.py", line 1577, in _prepare_callback
+    raise KeyError(f"Callback function not found for output '{output}'.") from e
+KeyError: "Callback function not found for output 'tab-content.children'."
+2026-07-05 18:33:59,663 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:33:59] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2026-07-05 18:36:40,112 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 18:36:40,113 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 18:36:40,115 [INFO] DB: [DB] Already have 16591 events — skipping CSV import
+2026-07-05 18:36:40,338 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 18:36:40,339 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 18:36:40,357 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 18:36:40,358 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 18:36:41,013 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:41] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:36:43,787 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:43,813 [INFO] YFINANCE: Downloading data for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F'] from 2026-06-05 to 2026-07-05
+2026-07-05 18:36:44,473 [INFO] YFINANCE: [YFINANCE] ^TNX MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['^TNX', '^TNX', '^TNX', '^TNX', '^TNX']
+2026-07-05 18:36:44,474 [INFO] YFINANCE: [YFINANCE] ^TNX → using level with score=5
+2026-07-05 18:36:44,748 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB', 'DX-Y.NYB']
+2026-07-05 18:36:44,748 [INFO] YFINANCE: [YFINANCE] DX-Y.NYB → using level with score=5
+2026-07-05 18:36:44,968 [INFO] YFINANCE: [YFINANCE] BTC-USD MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD', 'BTC-USD']
+2026-07-05 18:36:44,969 [INFO] YFINANCE: [YFINANCE] BTC-USD → using level with score=5
+2026-07-05 18:36:45,193 [INFO] YFINANCE: [YFINANCE] GC=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['GC=F', 'GC=F', 'GC=F', 'GC=F', 'GC=F']
+2026-07-05 18:36:45,193 [INFO] YFINANCE: [YFINANCE] GC=F → using level with score=5
+2026-07-05 18:36:45,557 [INFO] YFINANCE: [YFINANCE] CL=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['CL=F', 'CL=F', 'CL=F', 'CL=F', 'CL=F']
+2026-07-05 18:36:45,558 [INFO] YFINANCE: [YFINANCE] CL=F → using level with score=5
+2026-07-05 18:36:45,793 [INFO] YFINANCE: [YFINANCE] ES=F MultiIndex levels=2, level0=['Close', 'High', 'Low', 'Open', 'Volume'], level1=['ES=F', 'ES=F', 'ES=F', 'ES=F', 'ES=F']
+2026-07-05 18:36:45,793 [INFO] YFINANCE: [YFINANCE] ES=F → using level with score=5
+2026-07-05 18:36:45,796 [INFO] YFINANCE: [YFINANCE] Fetched 129 rows for ['^TNX', 'DX-Y.NYB', 'BTC-USD', 'GC=F', 'CL=F', 'ES=F']
+2026-07-05 18:36:45,798 [INFO] DB: DB connection opened for thread Thread-3 (process_request_thread)
+2026-07-05 18:36:46,044 [INFO] app.callbacks: [MARKETS] Saved 129 rows to market_prices
+2026-07-05 18:36:46,045 [INFO] app.callbacks: [MARKETS] Raw data: 129 rows, 6 symbols
+2026-07-05 18:36:46,088 [INFO] app.callbacks: [MARKETS] Figure has 6 traces
+2026-07-05 18:36:46,096 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:47,526 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:47,549 [INFO] DB: DB connection opened for thread Thread-11 (process_request_thread)
+2026-07-05 18:36:47,553 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:47,569 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:49,247 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:49,250 [INFO] DB: DB connection opened for thread Thread-14 (process_request_thread)
+2026-07-05 18:36:49,251 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:54,769 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:54,819 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD (all events)
+2026-07-05 18:36:56,160 [INFO] FOREX: [FOREX] Done: 2 weeks, 43 unique events
+2026-07-05 18:36:56,160 [INFO] DB: DB connection opened for thread Thread-16 (process_request_thread)
+2026-07-05 18:36:56,228 [INFO] app.callbacks: [CALENDAR] Saved 43 events to database
+2026-07-05 18:36:56,228 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:36:59,944 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:36:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:37:03,286 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:37:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:37:03,336 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD (all events)
+2026-07-05 18:37:04,403 [INFO] FOREX: [FOREX] Done: 2 weeks, 43 unique events
+2026-07-05 18:37:04,411 [INFO] DB: DB connection opened for thread Thread-19 (process_request_thread)
+2026-07-05 18:37:04,480 [INFO] app.callbacks: [CALENDAR] Saved 43 events to database
+2026-07-05 18:37:04,481 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:37:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:37:05,911 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:37:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:38:38,165 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:38:38] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:38:41,958 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:38:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:38:42,004 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD (all events)
+2026-07-05 18:38:42,848 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:38:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:38:43,355 [INFO] FOREX: [FOREX] Done: 2 weeks, 43 unique events
+2026-07-05 18:38:43,362 [INFO] DB: DB connection opened for thread Thread-23 (process_request_thread)
+2026-07-05 18:38:43,447 [INFO] app.callbacks: [CALENDAR] Saved 43 events to database
+2026-07-05 18:38:43,447 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:38:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:43:29,805 [INFO] DB: DB connection opened for thread MainThread
+2026-07-05 18:43:29,806 [INFO] DB: Database initialised: data/analytics.db
+2026-07-05 18:43:29,807 [INFO] DB: [DB] Already have 16591 events — skipping CSV import
+2026-07-05 18:43:29,986 [INFO] DASHBOARD: Starting Dash server on http://127.0.0.1:8050
+2026-07-05 18:43:29,987 [INFO] dash.dash: Dash is running on http://127.0.0.1:8050/
+
+2026-07-05 18:43:30,008 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2026-07-05 18:43:30,008 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-05 18:43:35,210 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:35] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:43:38,615 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:38] "GET / HTTP/1.1" 200 -
+2026-07-05 18:43:38,685 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:38] "[36mGET /assets/style.css?m=1782852704.0053992 HTTP/1.1[0m" 304 -
+2026-07-05 18:43:38,864 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:38] "GET /_dash-layout HTTP/1.1" 200 -
+2026-07-05 18:43:38,866 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:38] "GET /_dash-dependencies HTTP/1.1" 200 -
+2026-07-05 18:43:39,421 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:43:39,425 [INFO] app.callbacks: [MACRO] toggle_macro_charts: tab=tab-calendar visible=False
+2026-07-05 18:43:39,426 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:43:39,474 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:39] "GET /_favicon.ico?v=4.3.0 HTTP/1.1" 200 -
+2026-07-05 18:43:39,482 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:39] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2026-07-05 18:43:39,484 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:39] "[36mGET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1[0m" 304 -
+2026-07-05 18:43:39,485 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:39] "[36mGET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1[0m" 304 -
+2026-07-05 18:43:39,531 [INFO] FOREX: [FOREX] Range: 2026-07-05 → 2026-07-12 | currency=USD (all events)
+2026-07-05 18:43:41,145 [INFO] FOREX: [FOREX] Done: 2 weeks, 43 unique events
+2026-07-05 18:43:41,146 [INFO] DB: DB connection opened for thread Thread-12 (process_request_thread)
+2026-07-05 18:43:41,214 [INFO] app.callbacks: [CALENDAR] Saved 43 events to database
+2026-07-05 18:43:41,215 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:43:43,171 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:43:43,172 [INFO] app.callbacks: [MACRO] toggle_macro_charts: tab=tab-macro visible=True
+2026-07-05 18:43:43,172 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:43:43,184 [INFO] app.callbacks: [MACRO] refresh_macro fired: tab=tab-macro
+2026-07-05 18:43:43,199 [INFO] DB: DB connection opened for thread Thread-15 (process_request_thread)
+2026-07-05 18:43:43,200 [INFO] app.callbacks: [MACRO] DB matching events: 2554
+2026-07-05 18:43:43,201 [INFO] app.callbacks: [MACRO] CPI y/y: 168 rows, first=2010-01-15 last=2023-12-12
+2026-07-05 18:43:43,498 [INFO] app.callbacks: [MACRO] CPI m/m: 336 rows, first=2010-01-15 last=2023-12-12
+2026-07-05 18:43:43,511 [INFO] app.callbacks: [MACRO] PPI m/m: 336 rows, first=2010-01-20 last=2023-12-13
+2026-07-05 18:43:43,527 [INFO] app.callbacks: [MACRO] Core PCE Price Index m/m: 168 rows, first=2010-02-01 last=2023-12-22
+2026-07-05 18:43:43,539 [INFO] app.callbacks: [MACRO] GDP: 334 rows, first=2010-01-29 last=Wed Feb 29
+2026-07-05 18:43:43,553 [INFO] app.callbacks: [MACRO] Non-Farm Employment Change: 350 rows, first=2010-01-05 last=2026-07-02
+2026-07-05 18:43:43,568 [INFO] app.callbacks: [MACRO] Unemployment Rate: 175 rows, first=2010-01-08 last=2026-07-02
+2026-07-05 18:43:43,585 [INFO] app.callbacks: [MACRO] ISM Manufacturing PMI: 176 rows, first=2010-01-03 last=2026-07-01
+2026-07-05 18:43:43,601 [INFO] app.callbacks: [MACRO] ISM Services PMI: 174 rows, first=2010-01-05 last=2023-12-05
+2026-07-05 18:43:43,617 [INFO] app.callbacks: [MACRO] Retail Sales: 336 rows, first=2010-01-14 last=2023-12-14
+2026-07-05 18:43:43,646 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2026-07-05 18:43:43,659 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:43] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2026-07-05 18:43:43,667 [INFO] werkzeug: 127.0.0.1 - - [05/Jul/2026 18:43:43] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -

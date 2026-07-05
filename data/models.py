@@ -5,24 +5,26 @@
 # ---------------------------------------------------------------------------
 FOREX_CALENDAR_TABLE = """
 CREATE TABLE IF NOT EXISTS forex_calendar (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    date        TEXT    NOT NULL,
-    time        TEXT,
-    currency    TEXT    DEFAULT 'USD',
-    event_name  TEXT    NOT NULL,
-    importance  INTEGER DEFAULT 1,
-    actual      TEXT,
-    forecast    TEXT,
-    previous    TEXT,
-    unit        TEXT,
-    created_at  TEXT    DEFAULT (datetime('now')),
-    UNIQUE(date, event_name, time)
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    date            TEXT    NOT NULL,
+    time            TEXT,
+    currency        TEXT    DEFAULT 'USD',
+    event_name      TEXT    NOT NULL,
+    event_category  TEXT,
+    importance      TEXT    DEFAULT 'None',
+    actual          TEXT,
+    forecast        TEXT,
+    previous        TEXT,
+    unit            TEXT,
+    created_at      TEXT    DEFAULT (datetime('now')),
+    UNIQUE(date, time, currency, event_name)
 );
 """
 
 FOREX_CALENDAR_INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_forex_date ON forex_calendar(date);",
     "CREATE INDEX IF NOT EXISTS idx_forex_event ON forex_calendar(event_name);",
+    "CREATE INDEX IF NOT EXISTS idx_forex_category ON forex_calendar(event_category);",
 ]
 
 # ---------------------------------------------------------------------------

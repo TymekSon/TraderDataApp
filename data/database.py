@@ -100,3 +100,77 @@ class Database:
             f"ON CONFLICT({conflict_target}) DO UPDATE SET {updates}"
         )
         self.execute(query, tuple(data.values()))
+
+    # ------------------------------------------------------------------
+    # Bulk CSV import
+    # ------------------------------------------------------------------
+
+    def import_csv_bulk(self, csv_path: str, currency: str = "USD") -> int:
+        """Import a Forex-Factory CSV (from spoulan) into forex_calendar.
+
+        CSV columns: Date, Time, Currency, Event, Impact, Actual,
+        Forecast, Previous, Combined DateTime.
+
+        Returns number of rows imported.
+        """
+        import csv
+        import os
+
+        from scrapers.forex_factory import _normalize_event
+
+        if not os.path.isfile(csv_path):
+            logger.warning("[DB] CSV not found: %s", csv_path)
+            return 0
+
+        count = 0
+        with open(csv_path, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            rows_buf = []
+            for row in reader:
+                cur = row.get("Currency", "").strip()
+                if cur.upper() != currency.upper():
+                    continue
+
+                raw_name = row.get("Event", "").strip()
+                if not raw_name:
+                    continue
+
+                rows_buf.append({
+                    "date": row.get("Date", "").strip(),
+                    "time": row.get("Time", "").strip(),
+                    "currency": cur,
+                    "event_name": raw_name,
+                    "event_category": _normalize_event(raw_name),
+                    "importance": row.get("Impact", "None").strip(),
+                    "actual": row.get("Actual", "").strip(),
+                    "forecast": row.get("Forecast", "").strip(),
+                    "previous": row.get("Previous", "").strip(),
+                    "unit": "",
+                })
+                count += 1
+
+                if len(rows_buf) >= 5000:
+                    self._insert_batch("forex_calendar", rows_buf)
+                    rows_buf.clear()
+
+            if rows_buf:
+                self._insert_batch("forex_calendar", rows_buf)
+
+        logger.info("[DB] Imported %d rows from %s", count, csv_path)
+        return count
+
+    def _insert_batch(self, table: str, rows: List[Dict[str, Any]]) -> None:
+        """Insert multiple rows via INSERT OR REPLACE in a single transaction."""
+        conn = self._get_conn()
+        columns = [
+            "date", "time", "currency", "event_name", "event_category",
+            "importance", "actual", "forecast", "previous", "unit",
+        ]
+        placeholders = ", ".join("?" for _ in columns)
+        sql = (
+            f"INSERT OR REPLACE INTO {table} ({', '.join(columns)}) "
+            f"VALUES ({placeholders})"
+        )
+        values = [[r.get(c, "") for c in columns] for r in rows]
+        conn.executemany(sql, values)
+        conn.commit()
